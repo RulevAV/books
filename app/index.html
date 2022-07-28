@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Books</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Книжный клуб Flexberry Foundation</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/books.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/books.css" />
+
+    <link rel="stylesheet" href="{{rootURL}}bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{rootURL}}css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="{{rootURL}}css/tagsinput.css" />
+    <link rel="stylesheet" href="{{rootURL}}css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="{{rootURL}}css/styles.css" />
+
+    <script src="{{rootURL}}bootstrap/js/jquery-3.5.1.slim.min.js"></script>
 
     {{content-for "head-footer"}}
   </head>
@@ -20,6 +28,23 @@
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/books.js"></script>
 
+    <script src="{{rootURL}}js/popper.min.js"></script>
+    <script src="{{rootURL}}bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{rootURL}}js/tagsinput.js"></script>
+    <script src="{{rootURL}}js/bootstrap-file.js"></script>
+    <script src="{{rootURL}}js/bootstrap-datepicker.min.js"></script>
+    <script src="{{rootURL}}js/bootstrap-datepicker.ru.min.js"></script>
+    <script src="{{rootURL}}js/bootstrap-select.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(".datepicker").datepicker({
+          clearBtn: true,
+          format: "dd.mm.yyyy",
+          language: "ru",
+          autoclose: true,
+        });
+      });
+    </script>
     {{content-for "body-footer"}}
   </body>
 </html>

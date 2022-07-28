@@ -1,24 +1,47 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const funnel = require('broccoli-funnel');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'ember-bootstrap': {
+      'bootstrapVersion': 4,
+      'importBootstrapCSS': false
+    }
   });
 
-  // Use `app.import` to add additional libraries to the generated
-  // output files.
-  //
-  // If you need to use different assets in different
-  // environments, specify an object as the first parameter. That
-  // object's keys should be the environment name and the values
-  // should be the asset to use in that environment.
-  //
-  // If the library that you are including contains AMD or ES6
-  // modules that you would like to import into your application
-  // please specify an object with the list of modules as keys
-  // along with the exports of each module as its value.
+  app.import("vendor/css/styles.css");
 
-  return app.toTree();
+  const bootstrapjquery = funnel("vendor", {
+    include: ["jquery-3.5.1.slim.min.js"],
+    destDir: "bootstrap/js"
+  });
+
+  const jqueryFiles = funnel("node_modules/blueimp-file-upload/js", {
+    include: ["**/*.js"],
+    destDir: "js"
+  });
+
+  const bootstrapjs = funnel("node_modules/bootstrap/dist/js", {
+    include: ["*"],
+    destDir: "bootstrap/js"
+  });
+
+  const bootstrapcss = funnel("node_modules/bootstrap/dist/css", {
+    include: ["*"],
+    destDir: "bootstrap/css"
+  });
+
+  const css = funnel("vendor/css", {
+    include: ["*"],
+    destDir: "css"
+  });
+
+  const js = funnel("vendor/js", {
+    include: ["*"],
+    destDir: "js"
+  });
+
+  return app.toTree([jqueryFiles, bootstrapjs, bootstrapcss, bootstrapjquery, css, js]);
 };
