@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'books',
     environment,
@@ -47,5 +47,8 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  if (environment === 'ci') {
+    ENV.rootURL = '/books/';
+  }
   return ENV;
 };
