@@ -1,0 +1,91 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "1",
+      "author": "1",
+      "sumPages": 333,
+      "tags": [
+        "суперкгнига",
+        "программирование"
+      ],
+      "average_rating": 25,
+      "URLcover": "book-cover",
+      "URLDescription": "1"
+    },
+    {
+      "id": 2,
+      "name": "2",
+      "author": "2",
+      "sumPages": 555,
+      "tags": [
+        "суперкгнига",
+        "программирование"
+      ],
+      "average_rating": 90,
+      "URLcover": "book-cover",
+      "URLDescription": "2"
+    },
+    {
+      "id": 3,
+      "name": "2",
+      "author": "2",
+      "sumPages": 555,
+      "tags": [
+        "суперкгнига",
+        "программирование"
+      ],
+      "average_rating": 0,
+      "URLcover": "book-cover",
+      "URLDescription": "3"
+    },
+    {
+      "id": 4,
+      "name": "2",
+      "author": "2",
+      "sumPages": 555,
+      "tags": [
+        "суперкгнига",
+        "программирование"
+      ],
+      "average_rating": 100,
+      "URLcover": "book-cover",
+      "URLDescription": "4"
+    },
+    {
+      "id": 5,
+      "name": "что то",
+      "author": "2",
+      "sumPages": 555,
+      "tags": [
+        "суперкгнига",
+        "программирование"
+      ],
+      "average_rating": 100,
+      "URLcover": "book-cover",
+      "URLDescription": "5"
+    }
+  ],
+  "speakers": [
+    {
+      "firstName": "Петя",
+      "lastName": "Петров",
+      "patronymic": "Петрович"
+    },
+    {
+      "firstName": "aq",
+      "lastName": "ws",
+      "patronymic": "de"
+    },
+    {
+      "firstName": "qc",
+      "lastName": "wv",
+      "patronymic": "eb"
+    },
+    {
+      "firstName": "qb",
+      "lastName": "wn",
+      "patronymic": "em"
+    }
+  ]
+}

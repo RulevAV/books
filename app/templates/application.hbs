@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">
+  {{#link-to "index" class="navbar-brand"}}
     <img
-      src="images/logo-dark.png"
+      src="{{env 'rootURL'}}images/logo-dark.png"
       width="30"
       height="30"
       class="d-inline-block align-top"
@@ -9,7 +9,8 @@
       loading="lazy"
     />
     Книжный клуб
-  </a>
+  {{/link-to}}
+
   <button
     class="navbar-toggler"
     type="button"
@@ -54,9 +55,7 @@
   </div>
 </nav>
 <div class="container h-100">
-  <div class="row align-items-center h-100 home-page-nav">
-    {{outlet}}
-  </div>
+  {{outlet}}
 </div>
 <footer class="footer">
   <div class="container">

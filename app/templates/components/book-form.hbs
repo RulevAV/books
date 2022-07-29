@@ -1,0 +1,88 @@
+<form class="edit-form" onsubmit={{action "submitForm"}}>
+  <div class="form-group row">
+    <label
+      for="inputTitle"
+      class="col-sm-2 col-form-label text-right"
+    >Название</label>
+    <div class="col-sm-10">
+      {{input
+        type="text"
+        class="form-control form-control-lg"
+        laceholder="Полное название книги"
+        value=name
+      }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label
+      for="inputAuthor"
+      class="col-sm-2 col-form-label text-right"
+    >Автор</label>
+    <div class="col-sm-10">
+      {{input
+        type="text"
+        class="form-control form-control-lg"
+        id="inputAuthor"
+        placeholder="Фамилия И.О. автора"
+        value=author
+      }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label
+      for="inputPagesCount"
+      class="col-sm-2 col-form-label text-right"
+    >Объем</label>
+    <div class="col-sm-10">
+      {{input
+        type="number"
+        class="form-control form-control-lg"
+        id="inputPagesCount"
+        placeholder="Количество страниц книги"
+        value=sumPages
+      }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label
+      for="inputDescriptionURL"
+      class="col-sm-2 col-form-label text-right"
+    >Описание</label>
+    <div class="col-sm-10">
+      {{input
+        type="url"
+        class="form-control form-control-lg"
+        id="inputDescriptionURL"
+        placeholder="Ссылка на сайт с описанием книги"
+        value=URLDescription
+      }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label
+      for="customFile"
+      class="col-sm-2 col-form-label text-right"
+    >Обложка</label>
+    <div class="input-group input-group-lg col-sm-10">
+      {{input-file tagName=""}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label
+      for="inputTags"
+      class="col-sm-2 col-form-label text-right"
+    >Теги</label>
+    <div class="col-sm-10">
+      {{input-tags tags=book.tags tagName=""}}
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-12 text-right">
+      <button type="submit" class="btn btn-primary btn-lg">Сохранить</button>
+      <button
+        type="submit"
+        class="btn btn-outline-secondary btn-lg"
+      >Отмена</button>
+    </div>
+  </div>
+</form>
