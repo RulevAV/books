@@ -7,16 +7,16 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     'ember-bootstrap': {
       'bootstrapVersion': 4,
-      'importBootstrapCSS': false
+      'importBootstrapCSS': true
     }
   });
 
-  app.import("vendor/css/styles.css");
+  app.import("vendor/css/styles.css");//+
 
-  const bootstrapjquery = funnel("vendor", {
-    include: ["jquery-3.5.1.slim.min.js"],
-    destDir: "bootstrap/js"
-  });
+  // const bootstrapjquery = funnel("vendor", {
+  //   include: ["jquery-3.5.1.slim.min.js"],
+  //   destDir: "bootstrap/js"
+  // });
 
   const jqueryFiles = funnel("node_modules/blueimp-file-upload/js", {
     include: ["**/*.js"],
@@ -28,10 +28,10 @@ module.exports = function (defaults) {
     destDir: "bootstrap/js"
   });
 
-  const bootstrapcss = funnel("node_modules/bootstrap/dist/css", {
-    include: ["*"],
-    destDir: "bootstrap/css"
-  });
+  // const bootstrapcss = funnel("node_modules/bootstrap/dist/css", {
+  //   include: ["*"],
+  //   destDir: "bootstrap/css"
+  // });
 
   const css = funnel("vendor/css", {
     include: ["*"],
@@ -43,5 +43,5 @@ module.exports = function (defaults) {
     destDir: "js"
   });
 
-  return app.toTree([jqueryFiles, bootstrapjs, bootstrapcss, bootstrapjquery, css, js]);
+  return app.toTree([jqueryFiles, css, js, bootstrapjs]);
 };

@@ -13,10 +13,10 @@
         <div><strong>Автор</strong>: {{book.author}}</div>
         <div><strong>Количество страниц</strong>: {{book.sumPages}}</div>
         <div><strong>Теги</strong>:
-          {{#each book.tags as |tag|}}
-            <a href="#" class="tag-link"><span
-                class="small"
-              >#{{tag}}</span></a>,
+          {{#each book.tags as |tag index|}}
+            <a href="#" class="tag-link"><span class="small">#{{tag}}</span></a>
+            {{!-- {{if book.tags.length===tag "p" "v"}} --}}
+            {{!-- {{book.tags.length}}{{index}} --}}
           {{/each}}
         </div>
       </li>

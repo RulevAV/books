@@ -2,12 +2,13 @@
   "books": [
     {
       "id": 2,
-      "name": "кот2",
-      "author": "2",
+      "name": "Лес",
+      "author": "Коля",
       "sumPages": 555,
       "tags": [
         "суперкгнига",
-        "программирование"
+        "программирование",
+        "программирование2"
       ],
       "average_rating": 90,
       "URLcover": "images/book-cover.jpg",
@@ -15,8 +16,8 @@
     },
     {
       "id": 4,
-      "name": "2",
-      "author": "2",
+      "name": "поле29",
+      "author": "ира",
       "sumPages": 555,
       "tags": [
         "суперкгнига",
@@ -24,12 +25,12 @@
       ],
       "average_rating": 100,
       "URLcover": "images/book-cover.jpg",
-      "URLDescription": "4"
+      "URLDescription": "http://localhost:4200/edit-book/4"
     },
     {
       "id": 5,
       "name": "что то",
-      "author": "2",
+      "author": "лена",
       "sumPages": 555,
       "tags": [
         "суперкгнига",
@@ -40,7 +41,7 @@
       "URLDescription": "5"
     },
     {
-      "name": "444fc1l",
+      "name": "Война и мир",
       "author": "qwe",
       "sumPages": "4",
       "tags": [],
@@ -48,16 +49,6 @@
       "URLcover": "",
       "URLDescription": "http://localhost:4200/edit-book/234",
       "id": 6
-    },
-    {
-      "name": "кот3",
-      "author": "asd",
-      "sumPages": "3",
-      "tags": [],
-      "average_rating": 0,
-      "URLcover": "",
-      "URLDescription": "http://localhost:4200/create-book",
-      "id": 7
     }
   ],
   "speakers": [
