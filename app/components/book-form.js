@@ -1,10 +1,12 @@
 import Component from '@ember/component';
+import { set } from "@ember/object";
 
 export default Component.extend({
 
   actions: {
     submitForm(e) {
       e.preventDefault();
+
       this.save({
         id: this.get("book.id"),
         name: this.get("name"),
@@ -14,9 +16,11 @@ export default Component.extend({
         average_rating: this.get("average_rating"),
         URLcover: this.get("URLcover"),
         URLDescription: this.get("URLDescription"),
-      })
+      }, this.get("uploadData"))
     },
-
+    uploadDataChanged(uploadData) {
+      set(this, "uploadData", uploadData)
+    },
   },
 
   didReceiveAttrs() {

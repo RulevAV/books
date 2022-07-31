@@ -51,5 +51,8 @@ module.exports = function (environment) {
   if (environment === 'ci') {
     ENV.rootURL = '/books/';
   }
+
+  ENV.fileUploadURL = ENV.backendUrl + "/FileUpload";
+
   return ENV;
 };

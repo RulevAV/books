@@ -14,8 +14,10 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
+  height: 60px;
+  /* Set the fixed height of the footer here */
+  line-height: 60px;
+  /* Vertically center the text there */
   background-color: #f5f5f5;
   text-align: center;
   z-index: 100;
@@ -43,10 +45,10 @@ a:hover {
 }
 
 .navbar-light .navbar-brand,
-.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
+.navbar-light .navbar-nav .show>.nav-link {
   color: #263148;
 }
 
@@ -101,29 +103,36 @@ a.tag-link:hover {
 .btn:not([class*="btn-"]) {
   color: #3B4256;
 }
+
 .btn-trash:hover {
   color: #E53935;
-  
+
 }
+
 .btn-edit:hover {
   color: #62B0FF;
 }
+
 .btn-trash,
 .btn-edit {
   padding-right: 0;
 }
+
 .btn-edit:focus,
 .btn-trash:focus,
-.btn-video:focus, 
-.btn-present:focus{
+.btn-video:focus,
+.btn-present:focus {
   box-shadow: none;
 }
+
 .btn-present {
   color: #71BC90;
 }
+
 .btn-video {
   color: #62B0FF;
 }
+
 /* Bootstrap file styles
 -------------------------------------------------- */
 
@@ -208,8 +217,8 @@ a.tag-link:hover {
 }
 
 .dropdown.bootstrap-select.dropdown-filter-control {
-  margin-top: 0.5rem!important;
-  margin-bottom: 0.5rem!important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .dropdown.bootstrap-select .dropdown-toggle.bs-placeholder {
@@ -264,29 +273,34 @@ a.tag-link:hover {
   box-shadow: 0px 4px 12px rgba(95, 95, 95, 0.153646);
   /* margin: 1.5em; */
 }
+
 .card-header,
 .card-footer {
   background-color: #F4F7FB;
 }
+
 .card-header .card-title,
 .card-body .card-title {
   margin: 0;
 }
+
 a.card h3,
 a.card:hover h3 {
   color: #3B4256;
   outline: none;
   margin-top: 2rem;
 }
+
 a.card:hover {
   text-decoration: none;
 }
+
 a.card .card-body {
   padding: 2rem;
 }
 
 .border.border-dark {
-  border: 1px solid rgba(0, 0, 0, 0.1)!important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0px 4px 12px rgba(95, 95, 95, 0.153646);
 }
 
@@ -298,7 +312,7 @@ a.card .card-body {
   padding: 0.64285714em 0.78571429em;
 } */
 
-.col-12.text-right > .btn{
+.col-12.text-right>.btn {
   margin: .25rem .125rem;
 }
 

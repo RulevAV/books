@@ -7,6 +7,6 @@ export default Controller.extend({
     async createBook(book) {
       await this.get("dataService").createBook(book);
       this.transitionToRoute("books");
-    }
+    },
   },
 });

@@ -11,13 +11,6 @@ module.exports = function (defaults) {
     }
   });
 
-  app.import("vendor/css/styles.css");//+
-
-  // const bootstrapjquery = funnel("vendor", {
-  //   include: ["jquery-3.5.1.slim.min.js"],
-  //   destDir: "bootstrap/js"
-  // });
-
   const jqueryFiles = funnel("node_modules/blueimp-file-upload/js", {
     include: ["**/*.js"],
     destDir: "js"
@@ -27,11 +20,6 @@ module.exports = function (defaults) {
     include: ["*"],
     destDir: "bootstrap/js"
   });
-
-  // const bootstrapcss = funnel("node_modules/bootstrap/dist/css", {
-  //   include: ["*"],
-  //   destDir: "bootstrap/css"
-  // });
 
   const css = funnel("vendor/css", {
     include: ["*"],

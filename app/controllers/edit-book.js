@@ -9,20 +9,10 @@ export default Controller.extend({
   },
 
   actions: {
-    async updateBook(book) {
-      await this.get("dataService").updateBook(book);
+    async updateBook(book, uploadData) {
+      await this.get("dataService").updateBook(book, uploadData);
       this.transitionToRoute("books");
     }
   },
-
-  //setProperties
-
-  // didReceiveAttrs() {
-  //   this._super(...arguments);
-  //   this.setProperties({
-
-  //   });
-  // },
-
 
 });

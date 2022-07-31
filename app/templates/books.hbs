@@ -23,29 +23,39 @@
     </div>
     <div class="col-md-auto">
       <form class="form-inline">
-        <input
+        {{input
           class="form-control mr-2 search-long"
           type="search"
           placeholder="Найти по полям"
           aria-label="Найти по полям"
-        />
-        <button class="btn btn-primary my-2" type="submit">Найти</button>
+          value=search
+        }}
+        <button
+          class="btn btn-primary my-2"
+          type="submit"
+          onclick={{action "actionSearch"}}
+        >Найти</button>
       </form>
     </div>
     <div class="col-md-auto">
       <form class="form-inline">
-        <input
+        {{input
           class="form-control mr-2"
           type="search"
           placeholder="Поиск по тегам"
           aria-label="Найти по тегам"
-        />
-        <button class="btn btn-primary my-2" type="submit">Поиск</button>
+          value=tags_like
+        }}
+        <button
+          class="btn btn-primary my-2"
+          type="submit"
+          onclick={{action "actionSearch"}}
+        >Поиск</button>
       </form>
     </div>
   </div>
   <div class="row row-cols-1 row-cols-md-3 fix-margin">
-    {{#each model as |book|}}
+    {{#each books as |book|}}
       {{book-card book=book tagName="" onclick=(action "deleteBook" book)}}
     {{/each}}
   </div>

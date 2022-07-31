@@ -6,12 +6,10 @@
       "author": "Коля",
       "sumPages": 555,
       "tags": [
-        "суперкгнига",
-        "программирование",
-        "программирование2"
+        "fantasy"
       ],
       "average_rating": 90,
-      "URLcover": "images/book-cover.jpg",
+      "URLcover": "/uploads/kosmos-art-tumannosti-ogni-1659261178978.jpeg",
       "URLDescription": "http://localhost:4200/edit-book/2"
     },
     {
@@ -24,7 +22,7 @@
         "программирование"
       ],
       "average_rating": 100,
-      "URLcover": "images/book-cover.jpg",
+      "URLcover": "/uploads/kosmos-76-foto-68-1659261279644.jpeg",
       "URLDescription": "http://localhost:4200/edit-book/4"
     },
     {
@@ -34,19 +32,25 @@
       "sumPages": 555,
       "tags": [
         "суперкгнига",
-        "программирование"
+        "программирование",
+        "fantasy"
       ],
       "average_rating": 100,
-      "URLcover": "images/book-cover.jpg",
-      "URLDescription": "5"
+      "URLcover": "/uploads/1627105261_8-kartinkin-com-p-babochka-art-anime-anime-krasivo-9-1659260152137.jpeg",
+      "URLDescription": "http://localhost:4200/edit-book/5"
     },
     {
       "name": "Война и мир",
       "author": "qwe",
       "sumPages": "4",
-      "tags": [],
-      "average_rating": 0,
-      "URLcover": "",
+      "tags": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "average_rating": 10,
+      "URLcover": "/uploads/1625689876_6-phonoteka-org-p-kosmos-art-oboi-krasivo-6-1659260158955.jpeg",
       "URLDescription": "http://localhost:4200/edit-book/234",
       "id": 6
     }

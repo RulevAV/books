@@ -29,6 +29,7 @@ export default Component.extend({
   },
 
   willDestroyElement() {
+    this._super(...arguments);
     this.$("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").off('beforeItemAdd');
     this.$("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").off('beforeItemRemove');
   }
