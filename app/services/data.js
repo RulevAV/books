@@ -50,12 +50,34 @@ export default Service.extend({
       }
     })
   },
-  createBook(book) {
-    return fetch(`${ENV.backendUrl}/books`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(book)
-    });
+  createBook(book, uploadData) {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const entity = await fetch(`${ENV.backendUrl}/books`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(book)
+        }).then(response => response.json());
+
+        if (uploadData) {
+          uploadData.url = `${ENV.fileUploadURL}`;
+          const res = await uploadData.submit();
+
+          await fetch(`${ENV.backendUrl}/saveURL`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              entityId: entity.id,
+              fileName: res.filename
+            })
+          });
+        }
+
+        resolve()
+      } catch (error) {
+        reject();
+      }
+    })
   },
   getSpeakers() {
     return fetch(`${ENV.backendUrl}/speakers`).then(response => response.json());

@@ -15,10 +15,10 @@ export default Controller.extend({
   actions: {
     async deleteBook(book) {
       await this.get("dataService").deleteBook(book);
-      const books = this.get("model").filter((e) => {
+      const books = this.get("books").filter((e) => {
         return e.id !== book.id
       });
-      this.set("model", books)
+      this.set("books", books)
     },
     actionSearch(e) {
       e.preventDefault();
