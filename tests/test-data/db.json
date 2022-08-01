@@ -1,60 +1,26 @@
 {
   "books": [
     {
-      "id": 2,
-      "name": "Лес",
-      "author": "Коля",
-      "sumPages": 555,
+      "name": "война и мир",
+      "author": "Толстой",
+      "sumPages": "1300",
       "tags": [
-        "fantasy"
-      ],
-      "average_rating": 90,
-      "URLcover": "/uploads/scale_1200-1659281369718.webp",
-      "URLDescription": "http://localhost:4200/edit-book/6"
-    },
-    {
-      "name": "",
-      "author": "",
-      "sumPages": 0,
-      "tags": [],
-      "average_rating": 0,
-      "URLcover": "/uploads/kosmos-art-tumannosti-ogni-1659284780870.jpeg",
-      "URLDescription": "",
-      "id": 3
-    },
-    {
-      "name": "sdcvds",
-      "author": "sdc",
-      "sumPages": "4",
-      "tags": [
-        "sdfs"
+        "литература 19 века",
+        "русская классика",
+        "классическая проза"
       ],
       "average_rating": 0,
-      "URLcover": "/uploads/1581997163_4k-ultra-hd-galaxy_vsthemes_ru-27-1659284823195.jpeg",
-      "URLDescription": "",
-      "id": 4
+      "URLcover": "/uploads/1920x1080_58228_[www.ArtFile.ru]-1659331586314.jpg",
+      "URLDescription": "http://localhost:4200/edit-book/6",
+      "id": 1
     }
   ],
   "speakers": [
     {
-      "firstName": "Петя",
-      "lastName": "Петров",
-      "patronymic": "Петрович"
-    },
-    {
-      "firstName": "aq",
-      "lastName": "ws",
-      "patronymic": "de"
-    },
-    {
-      "firstName": "qc",
-      "lastName": "wv",
-      "patronymic": "eb"
-    },
-    {
-      "firstName": "qb",
-      "lastName": "wn",
-      "patronymic": "em"
+      "firstName": "петя",
+      "lastName": "петров",
+      "patronymic": "петрович",
+      "id": 1
     }
   ]
 }

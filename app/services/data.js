@@ -79,10 +79,33 @@ export default Service.extend({
       }
     })
   },
-  getSpeakers() {
-    return fetch(`${ENV.backendUrl}/speakers`).then(response => response.json());
+  getSpeakers(search) {
+    let queryParams = "";
+
+    if (search) {
+      queryParams = `?q=${search}`;
+    }
+
+    return fetch(`${ENV.backendUrl}/speakers${queryParams}`).then(response => response.json());
   },
   getSpeaker(id) {
     return fetch(`${ENV.backendUrl}/speakers/${id}`).then(response => response.json());
+  },
+  deleteSpeaker(speaker) {
+    return fetch(`${ENV.backendUrl}/Speakers/${speaker.id}`, { method: "DELETE" });
+  },
+  updateSpeaker(speaker) {
+    return fetch(`${ENV.backendUrl}/speakers/${speaker.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(speaker)
+    });
+  },
+  createSpeaker(speaker) {
+    return fetch(`${ENV.backendUrl}/speakers`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(speaker)
+    })
   }
 });

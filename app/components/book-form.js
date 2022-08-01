@@ -6,7 +6,6 @@ export default Component.extend({
   actions: {
     submitForm(e) {
       e.preventDefault();
-
       this.save({
         id: this.get("book.id"),
         name: this.get("name"),

@@ -1,8 +1,9 @@
 import Component from '@ember/component';
-
+import { computed } from '@ember/object';
+import { htmlSafe } from '@ember/template';
 export default Component.extend({
 
-  progressbarStyle: Ember.computed('progressbarStyle', function () {
-    return Ember.String.htmlSafe(`width: ${this.get("book.average_rating")}%;`);
+  progressbarStyle: computed('progressbarStyle', function () {
+    return htmlSafe(`width: ${this.get("book.average_rating")}%;`);
   })
 });

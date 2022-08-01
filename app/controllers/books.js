@@ -7,7 +7,7 @@ export default Controller.extend({
   tags_like: "",
   dataService: service("data"),
 
-  async updateBooks() {
+  async getBooks() {
     const books = await this.get("dataService").getBooks(this.get("search"), this.get("tags_like"));
     this.set("books", books);
   },
@@ -22,7 +22,7 @@ export default Controller.extend({
     },
     actionSearch(e) {
       e.preventDefault();
-      this.updateBooks();
+      this.getBooks();
     }
   }
 });
