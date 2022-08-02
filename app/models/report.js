@@ -7,7 +7,7 @@ export default DS.Model.extend({
   URLVideo: DS.attr(),
   Review: DS.attr(),
 
-  books: DS.belongsTo("book"),
-  speakers: DS.belongsTo("speaker"),
-  meetings: DS.belongsTo("meeting")
+  book: DS.belongsTo("book"),
+  speaker: DS.belongsTo("speaker"),
+  meeting: DS.belongsTo("meeting")
 });

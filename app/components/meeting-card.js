@@ -6,7 +6,8 @@ export default Component.extend({
 
     async test(e) {
       e.preventDefault();
-      console.log("meeting-card");
+      //this.test2(this.meeting.id);
+      //console.log(this.meeting.id);
       this.sendAction('test2');
       //console.log(this.sendAction);
       //let temp = await this.get("meeting");
@@ -20,5 +21,10 @@ export default Component.extend({
       //let temp2 = await temp.reports;
       //this.send("RouteActionSearch");
     }
+  },
+
+  didReceiveAttrs() {
+    this._super(...arguments);
+    console.log(123);
   }
 });

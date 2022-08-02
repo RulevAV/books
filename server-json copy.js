@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 // eslint-disable-next-line no-undef
-
 const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('./tests/test-data/db.json')
@@ -37,7 +36,7 @@ server.use(jsonServer.bodyParser);
 const upload = multer({ storage });
 
 server.post("/FileUpload", upload.any(), function (req, res) {
-  console.log(123);
+
   let filedata = req.files;
 
   if (!filedata) {

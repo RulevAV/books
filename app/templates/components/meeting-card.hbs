@@ -73,9 +73,9 @@
   <button onclick={{action "test"}}>test</button>
   <ul class="list-group">
 
-    {{!-- {{#each meeting.reports as |report|}}
-      {{report.reports}}
-    {{/each}} --}}
-    {{meeting-card/report}}
+    {{#each meeting.reports as |report|}}
+      {{report.dataReport}}
+    {{/each}}
+    {{!-- {{meeting-card/report}} --}}
   </ul>
 </div>

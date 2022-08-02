@@ -118,8 +118,18 @@
     </div>
   </div>
   {{#each model as |meeting|}}
+    {{!-- meeting -
+    {{meeting.dataMeeting}} --}}
     {{!-- {{meeting.id}} --}}
-    {{meeting-card meeting=meeting}}
+    {{meeting-card meeting=meeting test2=(action "test2")}}
+    {{#each meeting.reports as |report|}}
+      {{report.speaker.lastName}}
+    {{/each}}
+    {{!-- {{debugger}} --}}
+
+    {{!-- {{#each (await meeting.reports) as |report|}}
+      {{report.dataReport}}
+    {{/each}} --}}
   {{/each}}
 
   <nav aria-label="Page navigation example">

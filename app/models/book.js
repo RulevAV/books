@@ -6,8 +6,8 @@ export default DS.Model.extend({
   sumPages: DS.attr(),
   tags: DS.attr(),
   averageRating: DS.attr(),
-  uRLcover: DS.attr(),
-  uRLDescription: DS.attr(),
+  URLcover: DS.attr(),
+  URLDescription: DS.attr(),
 
   report: DS.hasMany("report")
 });

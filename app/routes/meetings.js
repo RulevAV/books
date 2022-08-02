@@ -8,8 +8,11 @@ export default Route.extend({
   },
 
   actions: {
-    sendData(data) {
-      console.log(data);
+    sendData(id) {
+      this.get("store").findRecord("meeting", id);
+      console.log('====================================');
+      console.log(this.get(model));
+      console.log('====================================');
     }
   }
 });

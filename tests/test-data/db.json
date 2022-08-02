@@ -1,14 +1,14 @@
 {
   "books": [
     {
-      "name": "x",
+      "name": "xppp",
       "author": "s",
       "sumPages": 0,
       "tags": [
         "c"
       ],
       "average_rating": 0,
-      "URLcover": "/uploads/kosmos-art-tumannosti-ogni-1659366233589.jpeg",
+      "URLcover": "/uploads/tumannost-zvezdy-kosmos-1659451088211.jpeg",
       "URLDescription": "",
       "id": 1,
       "type": "book"
@@ -19,6 +19,13 @@
       "sumPages": 0,
       "tags": [],
       "id": 2
+    },
+    {
+      "name": "c v",
+      "author": "",
+      "sumPages": 0,
+      "tags": [],
+      "id": 3
     }
   ],
   "speakers": [
@@ -27,16 +34,11 @@
       "lastName": "петров",
       "patronymic": "петрович",
       "id": 1
-    },
-    {
-      "firstName": "l",
-      "lastName": "l",
-      "patronymic": "l",
-      "id": 2
     }
   ],
   "reports": [
     {
+      "id": 1,
       "dataReport": "12.02.2022",
       "rating_book": 4,
       "URLPresentation": "",

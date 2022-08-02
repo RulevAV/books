@@ -32,7 +32,7 @@ export default Service.extend({
 
         if (uploadData) {
           uploadData.url = `${ENV.fileUploadURL}`;
-          const res = await uploadData.submit();
+          const res = uploadData.submit();
 
           await fetch(`${ENV.backendUrl}/saveURL`, {
             method: "POST",
@@ -49,6 +49,30 @@ export default Service.extend({
         reject();
       }
     })
+  },
+  addURLcover(uploadData, id) {
+    return new Promise(async (resolve, reject) => {
+      try {
+        if (uploadData) {
+          uploadData.url = `${ENV.fileUploadURL}`;
+          const res = await uploadData.submit();
+
+          await fetch(`${ENV.backendUrl}/saveURL`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              entityId: id,
+              fileName: res.filename
+            })
+          });
+        }
+
+        resolve()
+      } catch (error) {
+        reject();
+      }
+    })
+
   },
   createBook(book, uploadData) {
     return new Promise(async (resolve, reject) => {

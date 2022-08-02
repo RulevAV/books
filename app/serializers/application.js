@@ -14,8 +14,8 @@ export default DS.JSONSerializer.extend({
   },
 
   extractRelationship(relationshipModelName, relationshipHash) {
-    // let hash = relationshipHash.id ? relationshipHash.id : relationshipHash;
-    // return this._super.call(this, relationshipModelName, hash);
+    //let hash = relationshipHash.id ? relationshipHash.id : relationshipHash;
+    //return this._super.call(this, relationshipModelName, hash);
     return this._super(...arguments);
   },
 

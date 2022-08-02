@@ -3,8 +3,9 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 
   actions: {
-    test2() {
-      console.log("test2");
+    test2(id) {
+      //console.log("test2");
+      this.send("sendData", id);
     }
   }
 });

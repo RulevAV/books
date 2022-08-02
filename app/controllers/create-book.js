@@ -7,6 +7,14 @@ export default Controller.extend({
     async createBook(book, uploadData) {
       const newSpeaker = this.get("store").createRecord("book", book);
       await newSpeaker.save();
+
+      if (uploadData) {
+        console.log(1);
+        uploadData.url = `${ENV.fileUploadURL}`;
+        const res = await uploadData.submit();
+        newSpeaker.fileName = res.filename;
+        await newSpeaker.save();
+      }
       this.transitionToRoute("books");
     },
   },

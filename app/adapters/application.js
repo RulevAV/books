@@ -25,8 +25,10 @@ export default DS.JSONAPIAdapter.extend({
     if (modelName === 'meeting' && requestType === 'findRecord' && id) {
       url += '?_embed=reports';
     }
-    console.log(modelName, requestType);
-    console.log(url);
+
+    if (modelName === 'meeting' && requestType === 'findAll') {
+      url += '?_embed=reports';
+    }
     return url;
   }
 
