@@ -5,7 +5,8 @@ export default Controller.extend({
   dataService: service("data"),
   actions: {
     async createSpeaker(speaker) {
-      await this.get("dataService").createSpeaker(speaker);
+      const newSpeaker = this.get("store").createRecord("speaker", speaker);
+      await newSpeaker.save();
       this.transitionToRoute("speakers");
     },
   },

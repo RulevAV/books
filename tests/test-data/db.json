@@ -1,18 +1,24 @@
 {
   "books": [
     {
-      "name": "война и мир",
-      "author": "Толстой",
-      "sumPages": "1300",
+      "name": "x",
+      "author": "s",
+      "sumPages": 0,
       "tags": [
-        "литература 19 века",
-        "русская классика",
-        "классическая проза"
+        "c"
       ],
       "average_rating": 0,
-      "URLcover": "/uploads/1920x1080_58228_[www.ArtFile.ru]-1659331586314.jpg",
-      "URLDescription": "http://localhost:4200/edit-book/6",
-      "id": 1
+      "URLcover": "/uploads/kosmos-art-tumannosti-ogni-1659366233589.jpeg",
+      "URLDescription": "",
+      "id": 1,
+      "type": "book"
+    },
+    {
+      "name": "l",
+      "author": "",
+      "sumPages": 0,
+      "tags": [],
+      "id": 2
     }
   ],
   "speakers": [
@@ -21,6 +27,38 @@
       "lastName": "петров",
       "patronymic": "петрович",
       "id": 1
+    },
+    {
+      "firstName": "l",
+      "lastName": "l",
+      "patronymic": "l",
+      "id": 2
+    }
+  ],
+  "reports": [
+    {
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "",
+      "bookId": 1,
+      "speakerId": 1,
+      "meetingId": 1
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "dataMeeting": "12.02.2022"
+    },
+    {
+      "id": 2,
+      "dataMeeting": "12.02.2020"
+    },
+    {
+      "id": 3,
+      "dataMeeting": "12.02.2010"
     }
   ]
 }

@@ -1,8 +1,8 @@
 import Route from '@ember/routing/route';
-
+import EmberObject from "@ember/object";
 export default Route.extend({
   model() {
-    return {
+    return EmberObject.create({
       name: "",
       author: "",
       sumPages: 0,
@@ -10,6 +10,6 @@ export default Route.extend({
       average_rating: 0,
       URLcover: "",
       URLDescription: "",
-    }
+    })
   }
 });

@@ -1,91 +1,55 @@
 {
   "books": [
     {
-      "id": 1,
-      "name": "1",
-      "author": "1",
-      "sumPages": 333,
+      "name": "x",
+      "author": "s",
+      "sumPages": 0,
       "tags": [
-        "суперкгнига",
-        "программирование"
-      ],
-      "average_rating": 25,
-      "URLcover": "book-cover",
-      "URLDescription": "1"
-    },
-    {
-      "id": 2,
-      "name": "2",
-      "author": "2",
-      "sumPages": 555,
-      "tags": [
-        "суперкгнига",
-        "программирование"
-      ],
-      "average_rating": 90,
-      "URLcover": "book-cover",
-      "URLDescription": "2"
-    },
-    {
-      "id": 3,
-      "name": "2",
-      "author": "2",
-      "sumPages": 555,
-      "tags": [
-        "суперкгнига",
-        "программирование"
+        "c"
       ],
       "average_rating": 0,
-      "URLcover": "book-cover",
-      "URLDescription": "3"
+      "URLcover": "/uploads/kosmos-art-tumannosti-ogni-1659366233589.jpeg",
+      "URLDescription": "",
+      "id": 1
     },
     {
-      "id": 4,
-      "name": "2",
-      "author": "2",
-      "sumPages": 555,
-      "tags": [
-        "суперкгнига",
-        "программирование"
-      ],
-      "average_rating": 100,
-      "URLcover": "book-cover",
-      "URLDescription": "4"
-    },
-    {
-      "id": 5,
-      "name": "что то",
-      "author": "2",
-      "sumPages": 555,
-      "tags": [
-        "суперкгнига",
-        "программирование"
-      ],
-      "average_rating": 100,
-      "URLcover": "book-cover",
-      "URLDescription": "5"
+      "name": "l",
+      "author": "",
+      "sumPages": 0,
+      "tags": [],
+      "id": 2
     }
   ],
   "speakers": [
     {
-      "firstName": "Петя",
-      "lastName": "Петров",
-      "patronymic": "Петрович"
+      "firstName": "петя",
+      "lastName": "петров",
+      "patronymic": "петрович",
+      "id": 1
     },
     {
-      "firstName": "aq",
-      "lastName": "ws",
-      "patronymic": "de"
-    },
+      "firstName": "l",
+      "lastName": "l",
+      "patronymic": "l",
+      "id": 2
+    }
+  ],
+  "reports": [
     {
-      "firstName": "qc",
-      "lastName": "wv",
-      "patronymic": "eb"
-    },
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "",
+      "bookId": 1,
+      "speakerId": 1,
+      "meetingId": 1
+    }
+  ],
+  "meetings": [
     {
-      "firstName": "qb",
-      "lastName": "wn",
-      "patronymic": "em"
+      "id": 1,
+      "dataMeeting": "12.02.2022"
     }
   ]
 }

@@ -7,22 +7,13 @@ export default Controller.extend({
   tags_like: "",
   dataService: service("data"),
 
-  async getBooks() {
-    const books = await this.get("dataService").getBooks(this.get("search"), this.get("tags_like"));
-    this.set("books", books);
-  },
-
   actions: {
     async deleteBook(book) {
-      await this.get("dataService").deleteBook(book);
-      const books = this.get("books").filter((e) => {
-        return e.id !== book.id
-      });
-      this.set("books", books)
+      await book.destroyRecord();
     },
     actionSearch(e) {
       e.preventDefault();
-      this.getBooks();
+      this.send("RouteActionSearch");
     }
   }
 });
