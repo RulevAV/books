@@ -31,5 +31,4 @@ export default DS.JSONAPIAdapter.extend({
     }
     return url;
   }
-
 });

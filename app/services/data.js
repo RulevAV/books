@@ -4,7 +4,6 @@ import ENV from 'books/config/environment';
 export default Service.extend({
   getBooks(search, tags_like) {
     let queryParams = "";
-
     if (search) {
       queryParams = `?q=${search}`;
     }
@@ -32,8 +31,8 @@ export default Service.extend({
 
         if (uploadData) {
           uploadData.url = `${ENV.fileUploadURL}`;
-          const res = uploadData.submit();
-
+          const res =await uploadData.submit();
+          console.log(res);
           await fetch(`${ENV.backendUrl}/saveURL`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -50,29 +49,9 @@ export default Service.extend({
       }
     })
   },
-  addURLcover(uploadData, id) {
-    return new Promise(async (resolve, reject) => {
-      try {
-        if (uploadData) {
-          uploadData.url = `${ENV.fileUploadURL}`;
-          const res = await uploadData.submit();
-
-          await fetch(`${ENV.backendUrl}/saveURL`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              entityId: id,
-              fileName: res.filename
-            })
-          });
-        }
-
-        resolve()
-      } catch (error) {
-        reject();
-      }
-    })
-
+  saveFile(uploadData) {
+    uploadData.url = ENV.fileUploadURL;
+    return uploadData.submit();
   },
   createBook(book, uploadData) {
     return new Promise(async (resolve, reject) => {

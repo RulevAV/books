@@ -13,7 +13,6 @@ export default ApplicationSerializer.extend({
     return hash;
   },
 
-
   extractRelationship(relationshipModelName, relationshipHash) {
     return this._super(...arguments);
   }

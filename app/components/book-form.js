@@ -2,7 +2,6 @@ import Component from '@ember/component';
 import { set } from "@ember/object";
 
 export default Component.extend({
-
   actions: {
     submitForm(e) {
       e.preventDefault();
@@ -12,7 +11,7 @@ export default Component.extend({
         author: this.get("author"),
         sumPages: this.get("sumPages"),
         tags: this.get("tags"),
-        average_rating: this.get("average_rating"),
+        averageRating: this.get("averageRating"),
         URLcover: this.get("URLcover"),
         URLDescription: this.get("URLDescription"),
       }, this.get("uploadData"))
@@ -29,7 +28,7 @@ export default Component.extend({
       author: this.get("book.author"),
       sumPages: this.get("book.sumPages"),
       tags: this.get("book.tags"),
-      average_rating: this.get("book.average_rating"),
+      averageRating: this.get("book.averageRating"),
       URLcover: this.get("book.URLcover"),
       URLDescription: this.get("book.URLDescription"),
     });

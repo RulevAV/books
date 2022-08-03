@@ -37,7 +37,6 @@ server.use(jsonServer.bodyParser);
 const upload = multer({ storage });
 
 server.post("/FileUpload", upload.any(), function (req, res) {
-  console.log(123);
   let filedata = req.files;
 
   if (!filedata) {
@@ -49,14 +48,15 @@ server.post("/FileUpload", upload.any(), function (req, res) {
 });
 
 server.post('/saveURL', function (req, res) {
-  const entityId = req.body.entityId;
+  const entityId = parseInt(req.body.entityId);
   const fileName = req.body.fileName;
 
   const db = router.db; //lowdb instance
   const book = db.getState().books.find(book => book.id === entityId);
+ 
   book.URLcover = `${urlBase}${fileName}`;
   db.write();
-  res.status(200).json(book);
+    res.status(200).json(book);
 });
 
 function responseInterceptor(req, res, next) {

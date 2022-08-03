@@ -10,7 +10,6 @@ export default ApplicationSerializer.extend(DS.EmbeddedRecordsMixin, {
 
   normalize(model, hash) {
     hash = this._super(...arguments);
-
     return hash;
   },
 });

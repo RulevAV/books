@@ -1,39 +1,65 @@
 {
   "books": [
     {
-      "name": "xppp",
-      "author": "s",
-      "sumPages": 0,
+      "name": "Война и мир",
+      "author": "Лев Николаевич Толстой",
+      "sumPages": "1300",
       "tags": [
-        "c"
+        "литература 19 века",
+        "русская классика",
+        "классическая проза"
       ],
-      "average_rating": 0,
-      "URLcover": "/uploads/tumannost-zvezdy-kosmos-1659451088211.jpeg",
-      "URLDescription": "",
-      "id": 1,
-      "type": "book"
+      "averageRating": 50,
+      "URLcover": "/uploads/Vojna_i_mir._Roman_v_4_tomah._Kniga_2._Tom_34-1659547101564.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%BC%D0%B8%D1%80",
+      "id": 1
     },
     {
-      "name": "l",
-      "author": "",
-      "sumPages": 0,
-      "tags": [],
+      "name": "Двенадцать стульев",
+      "author": "Ильф и Петров",
+      "sumPages": "344",
+      "tags": [
+        "комедия",
+        "приключения",
+        "преступление"
+      ],
+      "averageRating": 0,
+      "URLcover": "/uploads/36860b09720a6144-1659547035285.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%B5%D0%BD%D0%B0%D0%B4%D1%86%D0%B0%D1%82%D1%8C_%D1%81%D1%82%D1%83%D0%BB%D1%8C%D0%B5%D0%B2",
       "id": 2
     },
     {
-      "name": "c v",
-      "author": "",
-      "sumPages": 0,
-      "tags": [],
+      "name": "Мастер и Маргарита",
+      "author": "Михаил Булгаков",
+      "sumPages": "480",
+      "tags": [
+        "мистика",
+        "литература 20 века"
+      ],
+      "averageRating": 0,
+      "URLcover": "/uploads/i659702-1659546983760.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%B8_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0",
       "id": 3
     }
   ],
   "speakers": [
     {
-      "firstName": "петя",
-      "lastName": "петров",
-      "patronymic": "петрович",
+      "firstName": "Иван",
+      "lastName": "Иванов",
+      "patronymic": "Иваныч",
       "id": 1
+    },
+    {
+      "firstName": "Петя",
+      "lastName": "Петров",
+      "patronymic": "Петрович",
+      "id": 2
+    },
+    {
+      "firstName": "Александр",
+      "lastName": "Александров",
+      "patronymic": "Александрович",
+      "id": 3
     }
   ],
   "reports": [
@@ -41,11 +67,44 @@
       "id": 1,
       "dataReport": "12.02.2022",
       "rating_book": 4,
-      "URLPresentation": "",
-      "URLVideo": "",
-      "Review": "",
+      "URLPresentation": "URLPresentation1",
+      "URLVideo": "URLVideo1",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
       "bookId": 1,
       "speakerId": 1,
+      "meetingId": 1
+    },
+    {
+      "id": 2,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "URLPresentation2",
+      "URLVideo": "URLVideo2",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 2,
+      "speakerId": 1,
+      "meetingId": 1
+    },
+    {
+      "id": 3,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "URLPresentation3",
+      "URLVideo": "URLVideo3",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 3,
+      "speakerId": 1,
+      "meetingId": 2
+    },
+    {
+      "id": 4,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "URLPresentation2",
+      "URLVideo": "URLVideo2",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 2,
+      "speakerId": 2,
       "meetingId": 1
     }
   ],
@@ -59,8 +118,24 @@
       "dataMeeting": "12.02.2020"
     },
     {
-      "id": 3,
-      "dataMeeting": "12.02.2010"
+      "dataMeeting": "12345676",
+      "reports": [],
+      "id": 3
+    },
+    {
+      "dataMeeting": "12345676",
+      "reports": [],
+      "id": 4
+    },
+    {
+      "dataMeeting": "12345676",
+      "reports": [],
+      "id": 5
+    },
+    {
+      "dataMeeting": "rrrrr",
+      "reports": [],
+      "id": 6
     }
   ]
 }

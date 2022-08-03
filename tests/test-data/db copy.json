@@ -1,55 +1,114 @@
 {
   "books": [
     {
-      "name": "x",
-      "author": "s",
-      "sumPages": 0,
+      "name": "Война и мир",
+      "author": "Лев Николаевич Толстой",
+      "sumPages": "1300",
       "tags": [
-        "c"
+        "литература 19 века",
+        "русская классика",
+        "классическая проза"
       ],
-      "average_rating": 0,
-      "URLcover": "/uploads/kosmos-art-tumannosti-ogni-1659366233589.jpeg",
-      "URLDescription": "",
+      "averageRating": 0,
+      "URLcover": "/uploads/Vojna_i_mir._Roman_v_4_tomah._Kniga_2._Tom_34-1659458821292.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%BC%D0%B8%D1%80",
       "id": 1
     },
     {
-      "name": "l",
-      "author": "",
-      "sumPages": 0,
-      "tags": [],
+      "name": "Двенадцать стульев",
+      "author": "Ильф и Петров",
+      "sumPages": "344",
+      "tags": [
+        "комедия",
+        "приключения",
+        "преступление"
+      ],
+      "averageRating": 0,
+      "URLcover": "/uploads/36860b09720a6144-1659459008159.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%B5%D0%BD%D0%B0%D0%B4%D1%86%D0%B0%D1%82%D1%8C_%D1%81%D1%82%D1%83%D0%BB%D1%8C%D0%B5%D0%B2",
       "id": 2
+    },
+    {
+      "name": "Мастер и Маргарита",
+      "author": "Михаил Булгаков",
+      "sumPages": "480",
+      "tags": [
+        "мистика",
+        "литература 20 века"
+      ],
+      "averageRating": 0,
+      "URLcover": "/uploads/i659702-1659459140622.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%B8_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0",
+      "id": 3
     }
   ],
   "speakers": [
     {
-      "firstName": "петя",
-      "lastName": "петров",
-      "patronymic": "петрович",
+      "firstName": "Иванов",
+      "lastName": "Иван",
+      "patronymic": "Иваныч",
       "id": 1
     },
     {
-      "firstName": "l",
-      "lastName": "l",
-      "patronymic": "l",
+      "firstName": "Петров",
+      "lastName": "Петя",
+      "patronymic": "Петрович",
       "id": 2
+    },
+    {
+      "firstName": "Александров",
+      "lastName": "Александр",
+      "patronymic": "Александрович",
+      "id": 3
     }
   ],
   "reports": [
     {
+      "id":1,
       "dataReport": "12.02.2022",
       "rating_book": 4,
       "URLPresentation": "",
       "URLVideo": "",
-      "Review": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
       "bookId": 1,
       "speakerId": 1,
       "meetingId": 1
+    },
+    {
+      "id":2,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 2,
+      "speakerId": 1,
+      "meetingId": 1
+    },
+    {
+      "id":3,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 3,
+      "speakerId": 1,
+      "meetingId": 2
     }
   ],
   "meetings": [
     {
       "id": 1,
       "dataMeeting": "12.02.2022"
+    },
+    {
+      "id": 2,
+      "dataMeeting": "12.02.2020"
+    },
+    {
+      "id": 3,
+      "dataMeeting": "12.02.2010"
     }
   ]
 }

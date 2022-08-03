@@ -32,7 +32,6 @@ export default Component.extend({
     });
   },
 
-
   willDestroyElement() {
     this._super(...arguments);
     this.$(".custom-file-input").fileupload("destroy");

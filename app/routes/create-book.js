@@ -7,7 +7,7 @@ export default Route.extend({
       author: "",
       sumPages: 0,
       tags: [],
-      average_rating: 0,
+      averageRating: 0,
       URLcover: "",
       URLDescription: "",
     })

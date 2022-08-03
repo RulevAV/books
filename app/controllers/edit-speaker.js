@@ -5,7 +5,6 @@ export default Controller.extend({
   dataService: service("data"),
   init() {
     this._super(...arguments);
-
   },
 
   actions: {
@@ -14,7 +13,6 @@ export default Controller.extend({
       speakerModel.set("firstName", speaker.firstName);
       speakerModel.set("lastName", speaker.lastName);
       speakerModel.set("patronymic", speaker.patronymic);
-
       await speakerModel.save();
 
       this.transitionToRoute("speakers");
