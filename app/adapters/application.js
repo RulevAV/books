@@ -13,7 +13,6 @@ export default DS.JSONAPIAdapter.extend({
 
   buildURL(modelName, id, snapshot, requestType, query) {
     let url = this._super(...arguments);
-
     if (modelName === 'speaker' && requestType === 'findRecord' && id) {
       url += '?_embed=reports';
     }
@@ -29,6 +28,21 @@ export default DS.JSONAPIAdapter.extend({
     if (modelName === 'meeting' && requestType === 'findAll') {
       url += '?_embed=reports';
     }
+
+    if (modelName === 'meeting' && requestType === 'query') {
+      url += '?_embed=reports';
+    }
     return url;
-  }
+  },
+
+  handleresponse(status, headers, payload) {
+    console.log("handleresponse");
+    const meta = {
+      total: headers[`x-total-count`]
+    }
+    console.log(meta);
+    payload.meta = meta;
+
+    return this._super(status, headers, payload)
+  },
 });
