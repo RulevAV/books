@@ -53,10 +53,10 @@ server.post('/saveURL', function (req, res) {
 
   const db = router.db; //lowdb instance
   const book = db.getState().books.find(book => book.id === entityId);
- 
+
   book.URLcover = `${urlBase}${fileName}`;
   db.write();
-    res.status(200).json(book);
+  res.status(200).json(book);
 });
 
 function responseInterceptor(req, res, next) {
@@ -84,6 +84,45 @@ function responseInterceptor(req, res, next) {
 
 server.use(responseInterceptor);
 
+server.use((req, res, next) => {
+  const speaker = Number(req.query.speaker);
+  const book = Number(req.query.book);
+  let date = req.query.date ? req.query.date : '';
+
+  if (req.method === "GET" && req.path === "/meetings" && (!Number.isNaN(speaker) || !Number.isNaN(book) || date)) {
+    date = date ? date : '';
+
+    let meetings = router.db.getState().meetings.filter(m => {
+      return m.dataMeeting.includes(date)
+    });
+
+    meetings = meetings.filter((m) => {
+      m.reports = router.db.getState().reports.filter(r => r.meetingId === m.id);
+
+      if (!Number.isNaN(speaker))
+        m.reports = m.reports.filter(r => r.speakerId === speaker);
+
+      if (!Number.isNaN(book))
+        m.reports = m.reports.filter(r => r.bookId === book);
+
+      m.reports = m.reports.map(r => {
+        r.book = router.db.getState().books.filter(b => b.id === r.bookId)
+        r.speaker = router.db.getState().speakers.filter(s => s.id === r.speakerId)
+        return r;
+      });
+
+      if (speaker || book) {
+        return m.reports.length > 0
+      }
+      return m;
+    });
+
+    res.json(meetings);
+  }
+  else {
+    next();
+  }
+})
 
 
 

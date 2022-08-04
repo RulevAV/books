@@ -36,4 +36,11 @@ export default Route.extend({
       meetings: this.get("store").query("meeting", guery)
     })
   },
+
+  actions: {
+    RouteActionSearch() {
+      this.refresh();
+    }
+  }
+
 });

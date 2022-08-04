@@ -24,76 +24,55 @@
     </div>
     <div class="col-md-3 align-top">
       <h5>Спикер</h5>
-      <select
-        class="selectpicker form-control dropdown-filter-control"
-        data-live-search="true"
-        data-size="5"
-        title="Спикер..."
-        value={{speaker}}
-        onchange={{action "changeSpeaker"}}
-      >
-        {{#each model.speakers as |speaker|}}
-          <option
-            value="{{speaker.id}}"
-            selected="selected"
-          >{{speaker.lastName}} {{speaker.firstName}}</option>
-        {{/each}}
-      </select>
+      <div class="form-group py-2 my-0">
+        <select
+          class="selectpicker form-control dropdown-filter-control"
+          value={{speaker}}
+          onchange={{action "changeSpeaker"}}
+        >
+          <option></option>
+          {{#each model.speakers as |item|}}
+            <option
+              value="{{item.id}}"
+              selected={{eq speaker item.id}}
+            >{{item.lastName}}
+              {{item.firstName}}</option>
+          {{/each}}
+        </select>
+      </div>
+
     </div>
     <div class="col-md-3">
       <h5>Книга</h5>
-      <select
-        class="selectpicker form-control dropdown-filter-control"
-        data-live-search="true"
-        data-size="5"
-        title="Спикер..."
-        value={{book}}
-        onchange={{action "changeBook"}}
-      >
-        {{#each model.books as |book|}}
-          <option value="{{book.id}}" selected="selected">{{book.name}}</option>
-        {{/each}}
-      </select>
+      <div class="form-group py-2 my-0">
+        <select
+          class="selectpicker form-control dropdown-filter-control"
+          value={{book}}
+          onchange={{action "changeBook"}}
+        >
+          <option></option>
+          {{#each model.books as |item|}}
+            <option
+              value="{{item.id}}"
+              selected={{eq book item.id}}
+            >{{item.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+
     </div>
     <div class="col-md-3">
       <h5>Дата встречи</h5>
       <div class="form-group py-2 my-0">
-        <div class="datepicker date input-group p-0 w-100">
-          {{input
-            type="text"
-            placeholder="Дата..."
-            class="form-control"
-            value=date
-          }}
-
-          <div class="input-group-append">
-            <span class="input-group-text px-4">
-              <svg
-                width="1em"
-                height="1em"
-                viewBox="0 0 16 16"
-                class="bi bi-clock"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z"
-                >
-                </path>
-                <path
-                  fill-rule="evenodd"
-                  d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
-                >
-                </path>
-              </svg>
-            </span>
-          </div>
-        </div>
+        {{input/input-datepicker value=date}}
       </div>
     </div>
     <div class="col-md-auto text-right col-filter">
-      <button type="button" class="btn btn-outline-primary my-2">
+      <button
+        type="button"
+        onclick={{action "actionSearch"}}
+        class="btn btn-outline-primary my-2"
+      >
         <svg
           viewBox="0 0 16 16"
           class="bi bi-funnel card-button"
@@ -110,7 +89,7 @@
       <button
         type="button"
         class="btn btn-outline-secondary my-2"
-        disabled="disabled"
+        onclick={{action "clearSearch"}}
       >
         <svg
           viewBox="0 0 16 16"

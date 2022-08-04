@@ -9,16 +9,12 @@ export default Controller.extend({
   date: "",
   speaker: "",
   book: "",
-  //pages: [1, 2, 3, 4],
 
   pages: computed('model.meetings.meta.total', function () {
-    console.log(this.get("model"));
     const total = 6;
     if (Number.isNaN(total) || total <= 0) {
       return [];
     }
-    const temp = new Array(Math.ceil(total / PER_PAGE)).fill().map((value, index) => index + 1);
-    console.log(temp);
     return new Array(Math.ceil(total / PER_PAGE)).fill().map((value, index) => index + 1)
   }),
 
@@ -46,11 +42,21 @@ export default Controller.extend({
     },
     changeBook(e) {
       this.set("book", e.target.value)
+    },
+    actionSearch(e) {
+      e.preventDefault();
+      this.send("RouteActionSearch");
+    },
+    clearSearch(e) {
+      e.preventDefault();
+      this.set("date", "");
+      this.set("speaker", "");
+      this.set("book", "");
+      this.send("RouteActionSearch");
     }
   },
 
   didReceiveAttrs() {
     this._super(...arguments);
-    console.log(123);
   }
 });
