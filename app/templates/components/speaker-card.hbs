@@ -6,10 +6,9 @@
         {{speaker.lastName}}
         {{speaker.patronymic}}</h5>
     </div>
+    {{#if session.isAuthenticated}}
     <div class="card-footer">
       <div class="row">
-        <div class="col">
-        </div>
         <div class="col text-right">
           {{#link-to
           "edit-speaker"
@@ -40,5 +39,6 @@
         </div>
       </div>
     </div>
+    {{/if}}
   </div>
 </div>

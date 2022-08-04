@@ -3,6 +3,7 @@
     <h2 class="text-center">Встречи клуба</h2>
     <div class="form-row navbar-panel justify-content-between align-items-end">
       <div class="col-md-1">
+        {{#if session.isAuthenticated}}
         {{#link-to
         "create-meeting"
         class="btn btn-outline-primary my-2"
@@ -15,6 +16,7 @@
           </path>
         </svg>
         {{/link-to}}
+        {{/if}}
       </div>
       <div class="col-md-3 align-top">
         <h5>Спикер</h5>

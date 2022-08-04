@@ -32,7 +32,6 @@ export default Service.extend({
         if (uploadData) {
           uploadData.url = `${ENV.fileUploadURL}`;
           const res =await uploadData.submit();
-          console.log(res);
           await fetch(`${ENV.backendUrl}/saveURL`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },

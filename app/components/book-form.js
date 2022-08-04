@@ -1,7 +1,10 @@
 import Component from '@ember/component';
 import { set } from "@ember/object";
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
+  currentUser: service(),
+
   actions: {
     submitForm(e) {
       e.preventDefault();
@@ -14,6 +17,7 @@ export default Component.extend({
         averageRating: this.get("averageRating"),
         URLcover: this.get("URLcover"),
         URLDescription: this.get("URLDescription"),
+        user:this.get("currentUser.user")
       }, this.get("uploadData"))
     },
     uploadDataChanged(uploadData) {

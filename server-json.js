@@ -127,7 +127,7 @@ server.post('/saveURL', function (req, res) {
 server.use(jsonServer.bodyParser);
 
 server.post('/token', function (req, res) {
-  
+
   const emailFromBody = req.body.email;
   const passwordFromBody = req.body.password;
   const hashedPassword = crypto.createHmac('sha256', hashingSecret).update(passwordFromBody).digest('hex');
@@ -170,7 +170,10 @@ server.use((req, res, next) => {
     }
     else {
       const db = router.db; //lowdb instance
-      const user = db.get('users').find({ username: storedUser.username }).value();
+
+      const user = db.getState().users.find(u=>{
+        return u.email === storedUser.email;
+      })
       const userCopy = Object.assign({}, user);
 
       delete userCopy.password;
@@ -296,10 +299,7 @@ server.use((req, res, next) => {
         return r;
       });
 
-      if (speaker || book) {
-        return m.reports.length > 0
-      }
-      return m;
+      return m.reports.length > 0 ? m : false
     });
 
     res.json(meetings);

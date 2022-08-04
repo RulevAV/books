@@ -1,8 +1,9 @@
 import Route from '@ember/routing/route';
-// import EmberObject from "@ember/object";
 import RSVP from 'rsvp';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
 import { PER_PAGE } from '../controllers/meetings';
+
 export default Route.extend({
   queryParams: {
     page: {
