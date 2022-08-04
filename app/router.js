@@ -17,6 +17,8 @@ Router.map(function () {
   this.route('meetings');
   this.route('edit-meeting',{ path: '/edit-meeting/:id' });
   this.route('create-meeting');
+  this.route('register');
+  this.route('login');
 });
 
 export default Router;

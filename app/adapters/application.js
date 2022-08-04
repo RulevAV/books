@@ -1,15 +1,23 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
+import { inject as service } from '@ember/service';
 import ENV from 'books/config/environment';
 
 export default DS.JSONAPIAdapter.extend({
+  session: service(),
   host: ENV.backendUrl,
 
-  init() {
-    this._super(...arguments);
-    this.set('headers', {
+  headers: computed(function() {
+    let resultHeaders = {
       'Content-Type': 'application/json'
-    });
-  },
+    };
+
+    if (this.get('session.isAuthenticated')) {
+      resultHeaders['Authorization'] = `Bearer ${this.session.data.authenticated.token}`;
+    }
+
+    return resultHeaders;
+  }).volatile(),
 
   buildURL(modelName, id, snapshot, requestType, query) {
     let url = this._super(...arguments);
@@ -35,14 +43,13 @@ export default DS.JSONAPIAdapter.extend({
     return url;
   },
 
-  handleresponse(status, headers, payload) {
-    console.log("handleresponse");
+  handleResponse(status, headers, payload) {
     const meta = {
-      total: headers[`x-total-count`]
-    }
-    console.log(meta);
+      total: headers['x-total-count'],
+    };
+
     payload.meta = meta;
 
-    return this._super(status, headers, payload)
-  },
+    return this._super(status, headers, payload);
+  }
 });
