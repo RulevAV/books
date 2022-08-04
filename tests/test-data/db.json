@@ -147,6 +147,12 @@
       "password": "c78ad56da335692c5caa5ada4a8384f938f7a5068a1019afbfa5137f936d31da",
       "passwordConfirmation": "c78ad56da335692c5caa5ada4a8384f938f7a5068a1019afbfa5137f936d31da",
       "id": 5
+    },
+    {
+      "email": "zxc@mail.ru",
+      "password": "30f716d15991b219ec186584ededbdc3b316676873cfbb0d5a9fe11c50b15ece",
+      "passwordConfirmation": "30f716d15991b219ec186584ededbdc3b316676873cfbb0d5a9fe11c50b15ece",
+      "id": 6
     }
   ]
 }

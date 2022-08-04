@@ -15,7 +15,16 @@
         <span class="error-message">{{error.message}}</span>
         {{/each}}
     </div>
-    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Зарегистрироваться</button>
+
+    <div class="field">
+        {{g-recaptcha-v2
+            siteKey=siteKeyCaptcha
+            verified=(action "verified")
+            expired=(action "expired")
+            reset=reset
+        }}
+    </div>
+    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit" disabled={{iAmRobot}}>Зарегистрироваться</button>
     {{#link-to "index" class="navbar-brand"}}
     <a class="w-100" href="index.html">Назад</a>
     {{/link-to}}
