@@ -3,12 +3,12 @@
         <h4>Дата встречи</h4>
         <div class="row h-100 justify-content-between mb-4">
             <div class="col-md-auto">
-                {{input/input-datepicker value=dataMeeting }}
+                {{input/input-datepicker value=dateMeeting }}
             </div>
         </div>
         <div class="row h-100 justify-content-between">
             <div class="col-md-auto">
-                <h4>Список докладов</h4>
+                <h4>{{t "menu.listReports"}}</h4>
             </div>
             <div class="col-md-auto">
                 <button type="button" class="btn btn-edit" onclick={{action "addReport" }}>

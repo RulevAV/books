@@ -89,28 +89,28 @@
   "meetings": [
     {
       "id": 1,
-      "dataMeeting": "2011-05-13T14:48:00.000Z"
+      "dateMeeting": "2011-05-13T14:48:00.000Z"
     },
     {
       "id": 2,
-      "dataMeeting": "2011-05-13T14:48:00.000Z"
+      "dateMeeting": "2011-05-13T14:48:00.000Z"
     },
     {
       "id": 3,
-      "dataMeeting": "2011-05-13T14:48:00.000Z"
+      "dateMeeting": "2011-05-13T14:48:00.000Z"
     },
     {
-      "dataMeeting": "2011-05-13T14:48:00.000Z",
+      "dateMeeting": "2011-05-13T14:48:00.000Z",
       "reports": [],
       "id": 4
     },
     {
-      "dataMeeting": "2011-05-13T14:48:00.000Z",
+      "dateMeeting": "2011-05-13T14:48:00.000Z",
       "reports": [],
       "id": 5
     },
     {
-      "dataMeeting": "2011-05-13T14:48:00.000Z",
+      "dateMeeting": "2011-05-13T14:48:00.000Z",
       "reports": [],
       "id": 6
     }
@@ -153,6 +153,36 @@
       "password": "30f716d15991b219ec186584ededbdc3b316676873cfbb0d5a9fe11c50b15ece",
       "passwordConfirmation": "30f716d15991b219ec186584ededbdc3b316676873cfbb0d5a9fe11c50b15ece",
       "id": 6
+    },
+    {
+      "email": "rty@mail.ru",
+      "password": "615301e7ae38589a95caeffe7ae5199c9a76f93c6b9a85fb5ec952e5e6a63bbd",
+      "passwordConfirmation": "615301e7ae38589a95caeffe7ae5199c9a76f93c6b9a85fb5ec952e5e6a63bbd",
+      "id": 7
+    },
+    {
+      "email": "rty@mail.ru",
+      "password": "9c7a948f4f22a0c977a6f45dd85865e6c94670c4afcc700ffcdcc074dda1172b",
+      "passwordConfirmation": "9c7a948f4f22a0c977a6f45dd85865e6c94670c4afcc700ffcdcc074dda1172b",
+      "id": 8
+    },
+    {
+      "email": "123@mail.ru",
+      "password": "6762a230543c8b125e59ca28c91a213344d142d4d99d73c9694367dc48cb4955",
+      "passwordConfirmation": "6762a230543c8b125e59ca28c91a213344d142d4d99d73c9694367dc48cb4955",
+      "id": 9
+    },
+    {
+      "email": "qwe@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 10
+    },
+    {
+      "email": "qwe@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 11
     }
   ]
 }

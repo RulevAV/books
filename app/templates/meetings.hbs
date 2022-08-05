@@ -1,6 +1,6 @@
 <div class="container h-100">
   <div class="htop">
-    <h2 class="text-center">Встречи клуба</h2>
+    <h2 class="text-center">{{t "menu.meetings"}}</h2>
     <div class="form-row navbar-panel justify-content-between align-items-end">
       <div class="col-md-1">
         {{#if session.isAuthenticated}}
@@ -19,7 +19,7 @@
         {{/if}}
       </div>
       <div class="col-md-3 align-top">
-        <h5>Спикер</h5>
+        <h5>{{t "menu.speaker"}}</h5>
         <div class="form-group py-2 my-0">
           <select class="selectpicker form-control dropdown-filter-control" value={{speaker}}
             onchange={{action "changeSpeaker" }}>
@@ -33,7 +33,7 @@
 
       </div>
       <div class="col-md-3">
-        <h5>Книга</h5>
+        <h5>{{t "menu.book"}}</h5>
         <div class="form-group py-2 my-0">
           <select class="selectpicker form-control dropdown-filter-control" value={{book}}
             onchange={{action "changeBook" }}>
@@ -46,7 +46,7 @@
 
       </div>
       <div class="col-md-3">
-        <h5>Дата встречи</h5>
+        <h5>{{t "menu.dateMeeting"}}</h5>
         <div class="form-group py-2 my-0">
           {{input/input-datepicker value=date}}
         </div>

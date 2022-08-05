@@ -2,7 +2,7 @@
   {{#link-to "index" class="navbar-brand"}}
   <img src="{{env 'rootURL'}}images/logo-dark.png" width="30" height="30" class="d-inline-block align-top" alt=""
     loading="lazy" />
-  Книжный клуб
+  {{t "menu.bookClub"}}
   {{/link-to}}
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -12,35 +12,35 @@
   <div class="collapse navbar-collapse" id="navbarContent">
     <ul class="nav navbar-nav navigation-main">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Рабочий стол
-          <span class="sr-only">(текущий)</span></a>
+        {{#link-to "index" class="nav-link"}}{{t "menu.desktop"}}{{/link-to}}
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="meetings.html">Встречи клуба</a>
+        {{#link-to "meetings" class="nav-link"}}{{t "menu.meetings"}}{{/link-to}}
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="books.html">Книги</a>
+        {{#link-to "speakers" class="nav-link"}}{{t "menu.speakers"}}{{/link-to}}
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="speakers.html">Спикеры</a>
+        {{#link-to "books" class="nav-link"}}{{t "menu.books"}}{{/link-to}}
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-success" href="#">Оставить заявку</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-primary" href="#">Запланировать</a>
-      </li>
+
     </ul>
     <ul class="nav navbar-nav">
 
       {{#if session.isAuthenticated}}
-      <li class="nav-item"><a href="#" onclick={{action "logout" }}>Выйти</a></li>
+      <li class="nav-item"><a href="#" onclick={{action "logout" }}>{{t "menu.logout"}}</a></li>
       {{else}}
-      <li class="nav-item">{{#link-to "register" class="nav-link text-info"}}Регистрация{{/link-to}}</li>
-      <li class="nav-item">{{#link-to "login" class="nav-link"}}Войти{{/link-to}}</li>
+      <li class="nav-item">{{#link-to "register" class="nav-link text-info"}}{{t "menu.register"}}{{/link-to}}</li>
+      <li class="nav-item">{{#link-to "login" class="nav-link"}}{{t "menu.login"}}{{/link-to}}</li>
       {{/if}}
 
     </ul>
+    <div class="current-user">
+      <select id="languageSelect" onchange={{action "changeLocale" }}>
+        <option value="en" selected={{isEnglish}}>Английский</option>
+        <option value="ru" selected={{isRussian}}>Русский</option>
+      </select>
+    </div>
   </div>
 </nav>
 

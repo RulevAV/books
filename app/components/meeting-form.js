@@ -11,7 +11,7 @@ export default Component.extend({
             e.preventDefault();
             this.save({
                 id: this.get("meeting.id"),
-                dataMeeting: this.get("dataMeeting"),
+                dateMeeting: this.get("dateMeeting"),
                 reports: this.get("reports")
             })
         },
@@ -85,7 +85,7 @@ export default Component.extend({
         const listBook = await this.get('store').findAll("book");
         const listSpeaker = await this.get('store').findAll("speaker");
         this.setProperties({
-            dataMeeting: this.get("meeting.dataMeeting"),
+            dateMeeting: this.get("meeting.dateMeeting"),
             reports,
             listBook,
             listSpeaker

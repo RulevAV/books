@@ -1,17 +1,17 @@
 <li class="list-group-item">
   <div class="row h-100 justify-content-between">
     <div class="col-md-2 text-center">
-      <h5 class="py-2">Спикер</h5>
+      <h5 class="py-2">{{t 'menu.speaker'}}</h5>
       <img src="/images/speaker.jpg" class="rounded w-100" alt="Спикер" />
       <p>{{report.speaker.lastName}} {{report.speaker.firstName}}</p>
     </div>
     <div class="col-md-2 text-center">
-      <h5 class="py-2">Книга</h5>
+      <h5 class="py-2">{{t 'menu.book'}}</h5>
       <p>{{report.book.name}}</p>
       <p>{{report.book.author}}</p>
       <div class="row align-items-center m-0">
         <div class="col-md-auto pl-0">
-          Оценка:
+          {{t "menu.ratingBook"}}:
         </div>
         <div class="col p-0">
           <div class="progress">
@@ -23,13 +23,13 @@
       </div>
     </div>
     <div class="col-md-6">
-      <h5 class="text-center py-2">Отзыв</h5>
+      <h5 class="text-center py-2">{{t 'menu.review'}}</h5>
       <p>
         {{report.Review}}
       </p>
     </div>
     <div class="col-md-2 text-center col-filter">
-      <h5 class="py-2">Ссылки</h5>
+      <h5 class="py-2">{{t 'menu.links'}}</h5>
       <a href="{{report.URLVideo}}" class="btn btn-video" title="Посмотреть запись доклада">
         <svg viewBox="0 0 16 16" class="bi bi-camera-reels card-button" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">

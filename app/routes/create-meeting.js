@@ -9,7 +9,7 @@ export default Route.extend({
         //await meetingModel.save();
         // TODO: не получится связать meeting и reports
         return EmberObject.create({
-            dataMeeting: "",
+            dateMeeting: "",
             reports: [],
         })
     }

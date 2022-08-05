@@ -122,28 +122,28 @@
   "meetings": [
     {
       "id": 1,
-      "dataMeeting": "12.02.2022"
+      "dateMeeting": "12.02.2022"
     },
     {
       "id": 2,
-      "dataMeeting": "12.02.2020"
+      "dateMeeting": "12.02.2020"
     },
     {
       "id": 3,
-      "dataMeeting": "12.02.2010"
+      "dateMeeting": "12.02.2010"
     },
     {
-      "dataMeeting": "12345676",
+      "dateMeeting": "12345676",
       "reports": [],
       "id": 4
     },
     {
-      "dataMeeting": "12345676",
+      "dateMeeting": "12345676",
       "reports": [],
       "id": 5
     },
     {
-      "dataMeeting": "rrrrr",
+      "dateMeeting": "rrrrr",
       "reports": [],
       "id": 6
     }

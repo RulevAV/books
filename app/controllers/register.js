@@ -17,7 +17,7 @@ export default Controller.extend({
         },
 
         error(error, transition) {
-            this.set('errors', error.user.errors);
+            this.set('errors', error.errors);
             return false;
         }
     },

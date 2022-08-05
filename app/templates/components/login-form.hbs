@@ -1,21 +1,23 @@
 <form onsubmit={{action "login"}}>
     <img class="mb-4" src="images/logo-dark.png" alt="" height="57">
-    <h1 class="h3 mb-3 fw-normal">Вход</h1>
+    <h1 class="h3 mb-3 fw-normal">{{t "menu.login"}}</h1>
     {{#each errors as |error|}}
-    <div class="error-alert">{{error.detail}}</div>
+    <div class="text-danger">{{error.detail}}</div>
     {{/each}}
     <div class="form-floating">
         {{input type="email" class="form-control" placeholder="name@example.com" value=email}}
     </div>
     <div class="form-floating">
-        {{input type="password" class="form-control" placeholder="Пароль" value=password}}
+        {{input type="password" class="form-control" placeholder="password" value=password}}
     </div>
 
     <div class="checkbox mb-3">
         <label>
-            <input type="checkbox" value="remember-me"> Запомнить
+            <input type="checkbox" value="remember-me">{{t "menu.remember"}}
         </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Войти</button>
-    <a class="w-100" href="index.html">Назад</a>
+    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">{{t "menu.login"}}</button>
+     {{#link-to "index" class="navbar-brand"}}
+    <a class="w-100" href="index.html">{{t "menu.back"}}</a>
+    {{/link-to}}
 </form>

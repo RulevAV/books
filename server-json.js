@@ -171,7 +171,7 @@ server.use((req, res, next) => {
     else {
       const db = router.db; //lowdb instance
 
-      const user = db.getState().users.find(u=>{
+      const user = db.getState().users.find(u => {
         return u.email === storedUser.email;
       })
       const userCopy = Object.assign({}, user);
@@ -214,8 +214,7 @@ server.use((req, res, next) => {
 // Validate user to add
 server.use((req, res, next) => {
   const db = router.db; //lowdb instance
-  const user = db.get('users').find({ username: req.body.username }).value();
-
+  const user = db.get('users').find({ email: req.body.email }).value();
   const valid = !req.body || req.body && !user;
   if (getBaseRoute(req) === 'users' && req.method === 'POST' && !valid) {
     res.status(422).json(getError('Username', 'username is already taken', 422, '/data/attributes/username'));
@@ -281,7 +280,7 @@ server.use((req, res, next) => {
     date = date ? date : '';
 
     let meetings = router.db.getState().meetings.filter(m => {
-      return m.dataMeeting.includes(date)
+      return m.dateMeeting.includes(date)
     });
 
     meetings = meetings.filter((m) => {
