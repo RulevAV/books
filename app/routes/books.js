@@ -15,5 +15,10 @@ export default Route.extend({
     RouteActionSearch() {
       this.refresh();
     }
+  },
+
+  setupController(controller, model) {
+    this._super(...arguments);
+    controller._refreshData();
   }
 });

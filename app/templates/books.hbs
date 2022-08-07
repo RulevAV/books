@@ -20,14 +20,8 @@
       </div>
       <div class="col-md-auto">
         <form class="form-inline">
-          {{input
-          class="form-control mr-2 search-long"
-          type="search"
-          placeholder="Найти по полям"
-          aria-label="Найти по полям"
-          value=search
-          }}
-          <button class="btn btn-primary my-2" type="submit" onclick={{action "actionSearch" }}>Найти</button>
+          <input type="text" class="form-control my-2 search-long" type="search" placeholder="Найти по полям"
+            aria-label="Найти по полям" oninput={{action "inputHandler"}} value={{search}}>
         </form>
       </div>
       <div class="col-md-auto">

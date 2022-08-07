@@ -1,6 +1,7 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
-import { get } from '@ember/object';
+import { get, set } from '@ember/object';
+import { debounce, cancel, schedule } from '@ember/runloop';
 
 export default Controller.extend({
   session: service(),
@@ -21,9 +22,33 @@ export default Controller.extend({
         applicationLogger.log(this.target.currentURL, error.message)
       }
     },
+
+    inputHandler(event) {
+      set(this, 'search', event.target.value);
+      let debounceId = get(this, 'debounceId');
+      cancel(debounceId);
+      this._refreshData();
+    },
+
     actionSearch(e) {
       e.preventDefault();
       this.send("RouteActionSearch");
     }
-  }
+  },
+
+  _refreshData() {
+    let debounceId = debounce(() => {
+      const search = get(this, 'search');
+      const tags_like = get(this, 'tags_like');
+      this.get("store").query("book", { q: search, tags_like }).then((data) => {
+        set(this, 'model', data)
+        schedule('afterRender', () => {
+          this._refreshData();
+        });
+      })
+    }, 2000);
+
+    set(this, 'debounceId', debounceId);
+  },
+
 });
