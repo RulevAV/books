@@ -9,7 +9,9 @@ export default Controller.extend({
 
   actions: {
     async deleteSpeaker(speaker) {
-      await speaker.destroyRecord();
+      await speaker.destroyRecord().then(() => {
+        this.get('store').unloadRecord(speaker);
+      });
     },
     actionSearch(e) {
       e.preventDefault();

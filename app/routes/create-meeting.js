@@ -3,14 +3,14 @@ import EmberObject from "@ember/object";
 
 export default Route.extend({
     async model() {
-        const report =await this.get("store").findRecord("report",1);
-        const meetingModel =await this.get("store").findRecord("meeting",1);
-        meetingModel.reports.pushObject(report);
-        //await meetingModel.save();
-        // TODO: не получится связать meeting и reports
-        return EmberObject.create({
+        const meeting = EmberObject.create({
             dateMeeting: "",
             reports: [],
+        })
+        return EmberObject.create({
+            meeting : this.get("store").createRecord("meeting"),
+            listBook: await this.get('store').findAll("book"),
+            listSpeaker: await this.get('store').findAll("speaker"),
         })
     }
 });

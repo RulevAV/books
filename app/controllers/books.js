@@ -11,7 +11,9 @@ export default Controller.extend({
 
   actions: {
     async deleteBook(book) {
-      await book.destroyRecord();
+      await book.destroyRecord().then(() => {
+        this.get('store').unloadRecord(book);
+      });
     },
     actionSearch(e) {
       e.preventDefault();

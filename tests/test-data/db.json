@@ -40,6 +40,17 @@
       "URLcover": "/uploads/i659702-1659546983760.jpg",
       "URLDescription": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%B8_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0",
       "id": 3
+    },
+    {
+      "name": "",
+      "author": "",
+      "sumPages": 0,
+      "tags": [],
+      "averageRating": 0,
+      "URLcover": "",
+      "URLDescription": "",
+      "userId": 4,
+      "id": 4
     }
   ],
   "speakers": [
@@ -64,55 +75,101 @@
   ],
   "reports": [
     {
-      "id": 1,
-      "dataReport": "12.02.2022",
-      "rating_book": 4,
-      "URLPresentation": "",
-      "URLVideo": "",
-      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
-      "bookId": 1,
-      "speakerId": 1,
-      "meetingId": 1
+      "id": 1
     },
     {
-      "id": 3,
-      "dataReport": "12.02.2022",
-      "rating_book": 4,
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "dataReport": null,
+      "rating_book": "",
       "URLPresentation": "",
       "URLVideo": "",
-      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
-      "bookId": 3,
+      "Review": "",
+      "bookId": 1,
+      "speakerId": 3,
+      "meetingId": 1,
+      "id": 16
+    },
+    {
+      "dataReport": null,
+      "rating_book": "",
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "",
+      "bookId": 1,
       "speakerId": 1,
-      "meetingId": 2
+      "meetingId": 1,
+      "id": 17
     }
   ],
   "meetings": [
     {
-      "id": 1,
-      "dateMeeting": "2011-05-13T14:48:00.000Z"
-    },
-    {
-      "id": 2,
-      "dateMeeting": "2011-05-13T14:48:00.000Z"
-    },
-    {
-      "id": 3,
-      "dateMeeting": "2011-05-13T14:48:00.000Z"
-    },
-    {
-      "dateMeeting": "2011-05-13T14:48:00.000Z",
-      "reports": [],
-      "id": 4
-    },
-    {
-      "dateMeeting": "2011-05-13T14:48:00.000Z",
-      "reports": [],
-      "id": 5
-    },
-    {
-      "dateMeeting": "2011-05-13T14:48:00.000Z",
-      "reports": [],
-      "id": 6
+      "dateMeeting": null,
+      "reports": [
+        {
+          "id": "16",
+          "dataReport": null,
+          "rating_book": "",
+          "URLPresentation": "",
+          "URLVideo": "",
+          "Review": "",
+          "bookId": 1,
+          "speakerId": 3,
+          "meetingId": 1
+        },
+        {
+          "id": "17",
+          "dataReport": null,
+          "rating_book": "",
+          "URLPresentation": "",
+          "URLVideo": "",
+          "Review": "",
+          "bookId": 1,
+          "speakerId": 1,
+          "meetingId": 1
+        }
+      ],
+      "id": 1
     }
   ],
   "users": [
@@ -143,46 +200,10 @@
       "id": 4
     },
     {
-      "email": "asd@mail.ru",
-      "password": "c78ad56da335692c5caa5ada4a8384f938f7a5068a1019afbfa5137f936d31da",
-      "passwordConfirmation": "c78ad56da335692c5caa5ada4a8384f938f7a5068a1019afbfa5137f936d31da",
+      "email": "qwe@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
       "id": 5
-    },
-    {
-      "email": "zxc@mail.ru",
-      "password": "30f716d15991b219ec186584ededbdc3b316676873cfbb0d5a9fe11c50b15ece",
-      "passwordConfirmation": "30f716d15991b219ec186584ededbdc3b316676873cfbb0d5a9fe11c50b15ece",
-      "id": 6
-    },
-    {
-      "email": "rty@mail.ru",
-      "password": "615301e7ae38589a95caeffe7ae5199c9a76f93c6b9a85fb5ec952e5e6a63bbd",
-      "passwordConfirmation": "615301e7ae38589a95caeffe7ae5199c9a76f93c6b9a85fb5ec952e5e6a63bbd",
-      "id": 7
-    },
-    {
-      "email": "rty@mail.ru",
-      "password": "9c7a948f4f22a0c977a6f45dd85865e6c94670c4afcc700ffcdcc074dda1172b",
-      "passwordConfirmation": "9c7a948f4f22a0c977a6f45dd85865e6c94670c4afcc700ffcdcc074dda1172b",
-      "id": 8
-    },
-    {
-      "email": "123@mail.ru",
-      "password": "6762a230543c8b125e59ca28c91a213344d142d4d99d73c9694367dc48cb4955",
-      "passwordConfirmation": "6762a230543c8b125e59ca28c91a213344d142d4d99d73c9694367dc48cb4955",
-      "id": 9
-    },
-    {
-      "email": "qwe@mail.ru",
-      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
-      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
-      "id": 10
-    },
-    {
-      "email": "qwe@mail.ru",
-      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
-      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
-      "id": 11
     }
   ]
 }

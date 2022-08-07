@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 
-export const PER_PAGE = 2;
+export const PER_PAGE = 5;
 
 export default Controller.extend({
   session: service(),
@@ -13,32 +13,20 @@ export default Controller.extend({
   book: "",
 
   pages: computed('model.meetings.meta.total', function () {
-    const total = 6;
+    const total =this.get('model.meetings.meta.total');
     if (Number.isNaN(total) || total <= 0) {
       return [];
     }
     return new Array(Math.ceil(total / PER_PAGE)).fill().map((value, index) => index + 1)
   }),
 
-  // selectedSpeaker: computed('speaker', function () {
-  //   const speaker = this.get('speaker');
-
-  //   return speaker ? this.get('model.speakers').findBy('id', speaker) : null
-  // }),
-
-  // selectedBook: computed('speaker', function () {
-  //   const speaker = this.get('speaker');
-
-  //   return speaker ? this.get('model.speakers').findBy('id', speaker) : null
-  // }),
-
   actions: {
     async delete(meeteing) {
-      await meeteing.destroyRecord();
+      await meeteing.destroyRecord().then(() => {
+        this.get('store').unloadAll();
+      });
     },
-    // changeSpeaker(speaker) {
-    //   this.set("changeSpeaker", speaker ? speaker.get('id') : "")
-    // }
+
     changeSpeaker(e) {
       this.set("speaker", e.target.value)
     },
@@ -54,6 +42,16 @@ export default Controller.extend({
       this.set("date", "");
       this.set("speaker", "");
       this.set("book", "");
+      this.send("RouteActionSearch");
+    },
+    back(e) {
+      e.preventDefault();
+      this.set('page', this.get('page') - 1)
+      this.send("RouteActionSearch");
+    },
+    next(e) {
+      e.preventDefault();
+      this.set('page', this.get('page') + 1)
       this.send("RouteActionSearch");
     }
   },

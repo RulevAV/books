@@ -245,7 +245,6 @@ server.use(async (request, response, next) => {
   }
 });
 
-
 function responseInterceptor(req, res, next) {
   var originalSend = res.send;
 
@@ -271,6 +270,7 @@ function responseInterceptor(req, res, next) {
 
 server.use(responseInterceptor);
 
+// meetings GET
 server.use((req, res, next) => {
   const speaker = Number(req.query.speaker);
   const book = Number(req.query.book);
@@ -301,12 +301,27 @@ server.use((req, res, next) => {
       return m.reports.length > 0 ? m : false
     });
 
-    res.json(meetings);
+    res.header('x-total-count', meetings.length);
+    res.header('Access-Control-Expose-Headers', 'X-Total-Count')
+
+    return res.json(meetings);
   }
   else {
     next();
   }
 })
+
+//error logger
+server.use((req, res, next) => {
+  if (getBaseRoute(req) === 'errors' && req.method === 'POST') {
+    req.body.date = new Date().toISOString()
+    req.body.ipClient = req.ip;
+    next();
+  }
+  else {
+    next();
+  }
+});
 
 // Use default router
 server.use(router)

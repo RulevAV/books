@@ -71,29 +71,39 @@
     </div>
 
     {{#each model.meetings as |meeting|}}
-    {{meeting-card meeting=meeting delete=(action "delete" meeting)}}
+    {{meeting/meeting-card meeting=meeting delete=(action "delete" meeting)}}
     {{/each}}
 
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-end">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" aria-label="Previous">
+        <li class="page-item {{if (eq page 1) 'disabled' ''}}">
+          <a
+            class="page-link"
+            disabled={{eq page 1}}
+            onclick={{action "back"}}
+            aria-label="Previous"
+          >
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
         {{#each pages as |page|}}
-        {{#link-to
-        "meetings"
-        (query-params page=page)
-        class="page-item"
-        tagName="li"
-        }}
-        <span class="page-link">{{page}}</span>
+          {{#link-to
+            "meetings"
+            (query-params page=page)
+            class="page-item"
+            tagName="li"
+          }}
+            <span class="page-link">{{page}}</span>
 
-        {{/link-to}}
+          {{/link-to}}
         {{/each}}
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
+        <li class="page-item {{if (eq page pages.length) 'disabled' ''}}">
+          <a
+            class="page-link"
+            disabled={{eq page pages.length}}
+            onclick={{action "next"}}
+            aria-label="Next"
+          >
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
