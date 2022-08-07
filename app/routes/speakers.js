@@ -7,7 +7,6 @@ export default Route.extend({
   },
   
   model({ search }) {
-    console.log(this.get("session"));
     return this.get('store').query('speaker', { q: search });
   },
 

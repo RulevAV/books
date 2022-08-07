@@ -1,20 +1,32 @@
 import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
 export default Controller.extend({
     store: Ember.inject.service(),
+    moment: service(),
 
     actions: {
         async updateMeeting() {
+            const applicationLogger = get(this, 'applicationLogger');
+
             const meeting = this.get('model.meeting');
-            const reports = meeting.reports.map(report => {
-                return new Promise(async (resolve, reject) => {
-                    report.set('dataReport', meeting.dateMeeting);
-                    await report.save();
-                    resolve()
+            const date = this.get('moment').moment(meeting.dateMeeting, 'YYYY-MM-DD').toDate();
+            meeting.set('dateMeeting', date);
+            try {
+                const reports = meeting.reports.map(report => {
+                    return new Promise(async (resolve, reject) => {
+                        report.set('dataReport', meeting.dateMeeting);
+                        await report.save();
+                        resolve()
+                    })
                 })
-            })
-            await Promise.all(reports);
-            meeting.save();
+                await Promise.all(reports);
+                meeting.save();
+            } catch (error) {
+                applicationLogger.log(this.target.currentURL, error.message)
+            }
+
             this.transitionToRoute("meetings");
         },
         async saveReport(newReport) {
@@ -30,9 +42,9 @@ export default Controller.extend({
                 if (newReport.id) {
                     report = await this.get("store").peekRecord("report", newReport.id)
                 }
-    
+
                 if (newReport.tempId) {
-                    report = meeting.reports.find(e=>e.tempId===newReport.tempId);
+                    report = meeting.reports.find(e => e.tempId === newReport.tempId);
                 }
                 report.set('Review', newReport.Review);
                 report.set('URLPresentation', newReport.URLPresentation);

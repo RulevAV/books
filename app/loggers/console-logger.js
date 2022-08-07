@@ -6,6 +6,6 @@ export default EmberObject.extend({
 
   log(url, message) {
     // eslint-disable-next-line no-console
-  //  this.get("dataService").writeError({ url, message })
+    this.get("dataService").writeError({ url, message })
   }
 });

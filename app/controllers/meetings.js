@@ -1,8 +1,9 @@
 import Controller from '@ember/controller';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
-export const PER_PAGE = 5;
+export const PER_PAGE = 2;
 
 export default Controller.extend({
   session: service(),
@@ -13,7 +14,7 @@ export default Controller.extend({
   book: "",
 
   pages: computed('model.meetings.meta.total', function () {
-    const total =this.get('model.meetings.meta.total');
+    const total = this.get('model.meetings.meta.total');
     if (Number.isNaN(total) || total <= 0) {
       return [];
     }
@@ -22,9 +23,19 @@ export default Controller.extend({
 
   actions: {
     async delete(meeteing) {
-      await meeteing.destroyRecord().then(() => {
-        this.get('store').unloadAll();
-      });
+      const applicationLogger = get(this, 'applicationLogger');
+      try {
+        await meeteing.reports.map(r => {
+          r.destroyRecord().then(() => {
+            this.get('store').unloadRecord(r);
+          })
+        })
+        await meeteing.destroyRecord().then(() => {
+          this.get('store').unloadRecord(meeteing);
+        });
+      } catch (error) {
+        applicationLogger.log(this.target.currentURL, error.message)
+      }
     },
 
     changeSpeaker(e) {

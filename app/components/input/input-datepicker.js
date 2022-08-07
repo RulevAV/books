@@ -5,7 +5,7 @@ export default Component.extend({
         this._super(...arguments);
         this.$(".datepicker").datepicker({
             clearBtn: true,
-            format: "dd.mm.yyyy",
+            format: "yyyy-mm-dd",
             language: "ru",
             autoclose: true,
           });

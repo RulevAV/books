@@ -1,31 +1,42 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
+
 export default Controller.extend({
     store: Ember.inject.service(),
     moment: service(),
+
     actions: {
         async updateMeeting() {
+            const applicationLogger = get(this, 'applicationLogger');
+
             const newMeeting = this.get('model.meeting');
             const date = this.get('moment').moment(newMeeting.dateMeeting, 'YYYY-MM-DD').toDate();
 
-            const meeting = this.get("store").createRecord("meeting", {
-                dateMeeting: date,
-                reports: []
-            });
-            await meeting.save();
+            try {
+                const meeting = this.get("store").createRecord("meeting", {
+                    dateMeeting: date,
+                    reports: []
+                });
+                await meeting.save();
 
-            const reports = newMeeting.reports.map(r => {
-                return new Promise(async (resolve, reject) => {
-                    const report = await this.get("store").createRecord("report",r);
-                    await meeting.reports.pushObject(report);
-                    await report.save();
-                    resolve()
+                const reports = newMeeting.reports.map(r => {
+                    return new Promise(async (resolve, reject) => {
+                        const report = await this.get("store").createRecord("report", r);
+                        await meeting.reports.pushObject(report);
+                        await report.save();
+                        resolve()
+                    })
                 })
-            })
 
-            await Promise.all(reports);
-            await meeting.save();
-            await this.get('store').unloadAll();
+                await Promise.all(reports);
+                await meeting.save();
+                await this.get('store').unloadAll();
+
+            } catch (error) {
+                applicationLogger.log(this.target.currentURL, error.message)
+            }
+
             this.transitionToRoute("meetings");
         },
         async saveReport(newReport) {
