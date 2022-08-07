@@ -19,8 +19,21 @@ module.exports = function (environment) {
     },
 
     APP: {
+      test: "Hello",
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: 'http://localhost:3000/token',
+      refreshAccessTokens: false
+    },
+    'ember-cli-google': {
+      recaptcha: {
+        siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+      },
+    },
+    i18n: {
+      defaultLocale: 'en'
     }
   };
 

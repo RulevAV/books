@@ -1,91 +1,185 @@
 {
   "books": [
     {
-      "id": 1,
-      "name": "1",
-      "author": "1",
-      "sumPages": 333,
+      "name": "Война и мир",
+      "author": "Лев Николаевич Толстой",
+      "sumPages": "1300",
       "tags": [
-        "суперкгнига",
-        "программирование"
+        "литература 19 века",
+        "русская классика",
+        "классическая проза"
       ],
-      "average_rating": 25,
-      "URLcover": "book-cover",
-      "URLDescription": "1"
+      "averageRating": 50,
+      "URLcover": "/uploads/Vojna_i_mir._Roman_v_4_tomah._Kniga_2._Tom_34-1659547101564.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%BC%D0%B8%D1%80",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "2",
-      "author": "2",
-      "sumPages": 555,
+      "name": "Двенадцать стульев",
+      "author": "Ильф и Петров",
+      "sumPages": "344",
       "tags": [
-        "суперкгнига",
-        "программирование"
+        "комедия",
+        "приключения",
+        "преступление"
       ],
-      "average_rating": 90,
-      "URLcover": "book-cover",
-      "URLDescription": "2"
+      "averageRating": 0,
+      "URLcover": "/uploads/36860b09720a6144-1659547035285.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%B5%D0%BD%D0%B0%D0%B4%D1%86%D0%B0%D1%82%D1%8C_%D1%81%D1%82%D1%83%D0%BB%D1%8C%D0%B5%D0%B2",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "2",
-      "author": "2",
-      "sumPages": 555,
+      "name": "Мастер и Маргарита",
+      "author": "Михаил Булгаков",
+      "sumPages": "480",
       "tags": [
-        "суперкгнига",
-        "программирование"
+        "мистика",
+        "литература 20 века"
       ],
-      "average_rating": 0,
-      "URLcover": "book-cover",
-      "URLDescription": "3"
-    },
-    {
-      "id": 4,
-      "name": "2",
-      "author": "2",
-      "sumPages": 555,
-      "tags": [
-        "суперкгнига",
-        "программирование"
-      ],
-      "average_rating": 100,
-      "URLcover": "book-cover",
-      "URLDescription": "4"
-    },
-    {
-      "id": 5,
-      "name": "что то",
-      "author": "2",
-      "sumPages": 555,
-      "tags": [
-        "суперкгнига",
-        "программирование"
-      ],
-      "average_rating": 100,
-      "URLcover": "book-cover",
-      "URLDescription": "5"
+      "averageRating": 0,
+      "URLcover": "/uploads/i659702-1659546983760.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%B8_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0",
+      "id": 3
     }
   ],
   "speakers": [
     {
+      "firstName": "Иван",
+      "lastName": "Иванов",
+      "patronymic": "Иваныч",
+      "id": 1
+    },
+    {
       "firstName": "Петя",
       "lastName": "Петров",
-      "patronymic": "Петрович"
+      "patronymic": "Петрович",
+      "id": 2
     },
     {
-      "firstName": "aq",
-      "lastName": "ws",
-      "patronymic": "de"
+      "firstName": "Александр",
+      "lastName": "Александров",
+      "patronymic": "Александрович",
+      "id": 3
+    }
+  ],
+  "reports": [
+    {
+      "id":1,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 1,
+      "speakerId": 1,
+      "meetingId": 1
     },
     {
-      "firstName": "qc",
-      "lastName": "wv",
-      "patronymic": "eb"
+      "id":2,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 2,
+      "speakerId": 1,
+      "meetingId": 1
     },
     {
-      "firstName": "qb",
-      "lastName": "wn",
-      "patronymic": "em"
+      "id":3,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 3,
+      "speakerId": 1,
+      "meetingId": 2
+    },
+    {
+      "id":4,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 2,
+      "speakerId": 2,
+      "meetingId": 1
+    },
+    {
+      "id":5,
+      "dataReport": "12.02.2022",
+      "rating_book": 4,
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "Molestiae molestiae saepe commodi delectus possimus nobis et. Assumenda sunt blanditiis. Pariatur et aut molestiae nihil. Blanditiis explicabo autem error. Qui aperiam sunt earum quod aut deserunt corporis accusamus. Quia numquam est magnam cumque.",
+      "bookId": 2,
+      "speakerId": 2,
+      "meetingId": 4
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "dateMeeting": "12.02.2022"
+    },
+    {
+      "id": 2,
+      "dateMeeting": "12.02.2020"
+    },
+    {
+      "id": 3,
+      "dateMeeting": "12.02.2010"
+    },
+    {
+      "dateMeeting": "12345676",
+      "reports": [],
+      "id": 4
+    },
+    {
+      "dateMeeting": "12345676",
+      "reports": [],
+      "id": 5
+    },
+    {
+      "dateMeeting": "rrrrr",
+      "reports": [],
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "email": "a@a.ru",
+      "username": "a",
+      "password": "3c1efb017ea632c6ff5fab2bf62cdcd8c5cf667bdcdc5b25b4c44e16770f1064",
+      "passwordConfirmation": "3c1efb017ea632c6ff5fab2bf62cdcd8c5cf667bdcdc5b25b4c44e16770f1064",
+      "id": 1
+    },
+    {
+      "email": "admin@admin.ru",
+      "username": "admin",
+      "password": "aed439235437c68773dcb392849729f25edc0dd67119722c2a172e3fa5350711",
+      "passwordConfirmation": "aed439235437c68773dcb392849729f25edc0dd67119722c2a172e3fa5350711",
+      "id": 2
+    },
+    {
+      "email": "asd@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 3
+    },
+    {
+      "email": "qwe@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 4
+    },
+    {
+      "email": "qwe@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 5
     }
   ]
 }

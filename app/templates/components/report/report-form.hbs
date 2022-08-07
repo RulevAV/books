@@ -1,0 +1,95 @@
+<form class='edit-form'>
+  <div class='form-group row'>
+    <label
+      for='inputTitle'
+      class='col-sm-2 col-form-label text-right'
+    >Спикер</label>
+    <div class='col-sm-10'>
+      <select
+        class='form-control form-control-lg'
+        onchange={{action 'changeSpeaker'}}
+        value={{report.speaker.id}}
+      >
+        {{#each listSpeaker as |item|}}
+          <option value={{item.id}}>{{item.firstName}}
+            {{item.lastName}}
+            {{item.patronymic}}
+          </option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <label
+      for='inputTitle'
+      class='col-sm-2 col-form-label text-right'
+    >Книга</label>
+    <div class='col-sm-10'>
+        {{book}}
+      <select
+        class='form-control form-control-lg'
+        onchange={{action 'changeBook'}}
+        value={{report.book.id}}
+      >
+        {{#each listBook as |item|}}
+          <option value={{item.id}}>{{item.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  <div class='form-group row'>
+    <label
+      for='inputTitle'
+      class='col-sm-2 col-form-label text-right'
+    >Отзыв</label>
+    <div class='col-sm-10'>
+      {{textarea
+        type='text'
+        class='form-control form-control-lg resizeNone'
+        placeholder='Отзыв'
+        value=report.Review
+      }}
+    </div>
+  </div>
+  <div class='form-group row'>
+    <label
+      for='inputTitle'
+      class='col-sm-2 col-form-label text-right'
+    >Видео</label>
+    <div class='col-sm-10'>
+      {{input
+        type='url'
+        class='form-control form-control-lg'
+        placeholder='Видео'
+        value=report.URLVideo
+      }}
+    </div>
+  </div>
+  <div class='form-group row'>
+    <label
+      for='inputTitle'
+      class='col-sm-2 col-form-label text-right'
+    >Презентация</label>
+    <div class='col-sm-10'>
+      {{input
+        type='url'
+        class='form-control form-control-lg'
+        laceholder='Полное название книги'
+        value=report.URLPresentation
+        placeholder='Ссылка на сайт с описанием книги'
+      }}
+    </div>
+  </div>
+  <div class='form-group row'>
+    <label for='inputTitle' class='col-sm-2 col-form-label text-right'>Рейтинг
+      книги</label>
+    <div class='col-sm-10'>
+      {{input
+        type='text'
+        class='form-control form-control-lg'
+        laceholder='Полное название книги'
+        value=report.rating_book
+      }}
+    </div>
+  </div>
+</form>

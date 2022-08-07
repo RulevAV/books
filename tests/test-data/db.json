@@ -1,25 +1,189 @@
 {
   "books": [
     {
-      "name": "война и мир",
-      "author": "Толстой",
+      "name": "Война и мир",
+      "author": "Лев Николаевич Толстой",
       "sumPages": "1300",
       "tags": [
         "литература 19 века",
         "русская классика",
         "классическая проза"
       ],
-      "average_rating": 0,
-      "URLcover": "/uploads/1920x1080_58228_[www.ArtFile.ru]-1659331586314.jpg",
-      "URLDescription": "http://localhost:4200/edit-book/6",
+      "averageRating": 50,
+      "URLcover": "/uploads/Vojna_i_mir._Roman_v_4_tomah._Kniga_2._Tom_34-1659547101564.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B8_%D0%BC%D0%B8%D1%80",
       "id": 1
+    },
+    {
+      "name": "Двенадцать стульев",
+      "author": "Ильф и Петров",
+      "sumPages": "344",
+      "tags": [
+        "комедия",
+        "приключения",
+        "преступление"
+      ],
+      "averageRating": 0,
+      "URLcover": "/uploads/36860b09720a6144-1659547035285.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%B5%D0%BD%D0%B0%D0%B4%D1%86%D0%B0%D1%82%D1%8C_%D1%81%D1%82%D1%83%D0%BB%D1%8C%D0%B5%D0%B2",
+      "id": 2
+    },
+    {
+      "name": "Мастер и Маргарита",
+      "author": "Михаил Булгаков",
+      "sumPages": "480",
+      "tags": [
+        "мистика",
+        "литература 20 века"
+      ],
+      "averageRating": 0,
+      "URLcover": "/uploads/i659702-1659546983760.jpg",
+      "URLDescription": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80_%D0%B8_%D0%9C%D0%B0%D1%80%D0%B3%D0%B0%D1%80%D0%B8%D1%82%D0%B0",
+      "id": 3
     }
   ],
   "speakers": [
     {
-      "firstName": "петя",
-      "lastName": "петров",
-      "patronymic": "петрович",
+      "firstName": "Иван",
+      "lastName": "Иванов",
+      "patronymic": "Иваныч",
+      "id": 1
+    },
+    {
+      "firstName": "Петя",
+      "lastName": "Петров",
+      "patronymic": "Петрович",
+      "id": 2
+    },
+    {
+      "firstName": "Александр",
+      "lastName": "Александров",
+      "patronymic": "Александрович",
+      "id": 3
+    }
+  ],
+  "reports": [
+    {
+      "dataReport": "1926-03-23T18:00:00.000Z",
+      "rating_book": "",
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "",
+      "bookId": 1,
+      "speakerId": 1,
+      "meetingId": 1,
+      "id": 16
+    },
+    {
+      "dataReport": "1926-03-23T18:00:00.000Z",
+      "rating_book": "",
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "",
+      "bookId": 1,
+      "speakerId": 1,
+      "meetingId": 1,
+      "id": 17
+    },
+    {
+      "dataReport": "2022-08-25T17:00:00.000Z",
+      "rating_book": "",
+      "URLPresentation": "",
+      "URLVideo": "",
+      "Review": "",
+      "bookId": 2,
+      "speakerId": 2,
+      "meetingId": 2,
+      "id": 18
+    }
+  ],
+  "meetings": [
+    {
+      "dateMeeting": "1926-03-23T18:00:00.000Z",
+      "reports": [
+        {
+          "id": "16",
+          "dataReport": "1926-03-23T18:00:00.000Z",
+          "rating_book": "",
+          "URLPresentation": "",
+          "URLVideo": "",
+          "Review": "",
+          "bookId": 1,
+          "speakerId": 1,
+          "meetingId": 1
+        },
+        {
+          "id": "17",
+          "dataReport": "1926-03-23T18:00:00.000Z",
+          "rating_book": "",
+          "URLPresentation": "",
+          "URLVideo": "",
+          "Review": "",
+          "bookId": 1,
+          "speakerId": 1,
+          "meetingId": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "dateMeeting": "2022-08-25T17:00:00.000Z",
+      "reports": [
+        {
+          "id": "18",
+          "dataReport": "2022-08-25T17:00:00.000Z",
+          "rating_book": "",
+          "URLPresentation": "",
+          "URLVideo": "",
+          "Review": "",
+          "bookId": 2,
+          "speakerId": 2,
+          "meetingId": 2
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "a@a.ru",
+      "username": "a",
+      "password": "3c1efb017ea632c6ff5fab2bf62cdcd8c5cf667bdcdc5b25b4c44e16770f1064",
+      "passwordConfirmation": "3c1efb017ea632c6ff5fab2bf62cdcd8c5cf667bdcdc5b25b4c44e16770f1064",
+      "id": 1
+    },
+    {
+      "email": "admin@admin.ru",
+      "username": "admin",
+      "password": "aed439235437c68773dcb392849729f25edc0dd67119722c2a172e3fa5350711",
+      "passwordConfirmation": "aed439235437c68773dcb392849729f25edc0dd67119722c2a172e3fa5350711",
+      "id": 2
+    },
+    {
+      "email": "asd@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 3
+    },
+    {
+      "email": "qwe@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 4
+    },
+    {
+      "email": "qwe@mail.ru",
+      "password": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "passwordConfirmation": "a49420e4d9dd2b8dc1e8cc3aab2269bf881c446ffa23cdce695b39c65963ae51",
+      "id": 5
+    }
+  ],
+  "errors": [
+    {
+      "url": "/create-speaker",
+      "message": "Assertion Failed: 'speaker' was saved to the server, but the response returned the new id '4', which has already been used with another record.'",
+      "date": "2022-08-07T13:54:38.124Z",
+      "ipClient": "::1",
       "id": 1
     }
   ]

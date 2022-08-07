@@ -14,6 +14,11 @@ Router.map(function () {
   this.route('404', { path: '/*path' });
   this.route('create-book');
   this.route('create-speaker');
+  this.route('meetings');
+  this.route('edit-meeting',{ path: '/edit-meeting/:id' });
+  this.route('create-meeting');
+  this.route('register');
+  this.route('login');
 });
 
 export default Router;

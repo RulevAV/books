@@ -1,7 +1,9 @@
 import Component from '@ember/component';
 import { set } from "@ember/object";
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
+  currentUser: service(),
 
   actions: {
     submitForm(e) {
@@ -12,9 +14,10 @@ export default Component.extend({
         author: this.get("author"),
         sumPages: this.get("sumPages"),
         tags: this.get("tags"),
-        average_rating: this.get("average_rating"),
+        averageRating: this.get("averageRating"),
         URLcover: this.get("URLcover"),
         URLDescription: this.get("URLDescription"),
+        user:this.get("currentUser.user")
       }, this.get("uploadData"))
     },
     uploadDataChanged(uploadData) {
@@ -29,7 +32,7 @@ export default Component.extend({
       author: this.get("book.author"),
       sumPages: this.get("book.sumPages"),
       tags: this.get("book.tags"),
-      average_rating: this.get("book.average_rating"),
+      averageRating: this.get("book.averageRating"),
       URLcover: this.get("book.URLcover"),
       URLDescription: this.get("book.URLDescription"),
     });

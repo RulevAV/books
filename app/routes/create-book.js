@@ -1,15 +1,17 @@
 import Route from '@ember/routing/route';
+import EmberObject from "@ember/object";
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default Route.extend({
+export default Route.extend(AuthenticatedRouteMixin,{
   model() {
-    return {
+    return EmberObject.create({
       name: "",
       author: "",
       sumPages: 0,
       tags: [],
-      average_rating: 0,
+      averageRating: 0,
       URLcover: "",
       URLDescription: "",
-    }
+    })
   }
 });
