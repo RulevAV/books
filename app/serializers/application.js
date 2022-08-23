@@ -2,6 +2,14 @@ import DS from 'ember-data';
 import { isNone } from '@ember/utils';
 
 export default DS.JSONSerializer.extend({
+  primaryKey: '__PrimaryKey',
+
+  extractId(modelClass, resourceHash) {
+    //debugger;
+    const primaryKey = this.get('primaryKey');
+    return resourceHash[primaryKey].guid;
+  },
+
   normalize(model, hash) {
     return this._super(...arguments);
   },
@@ -10,7 +18,7 @@ export default DS.JSONSerializer.extend({
     if (typeClass === 'belongsTo') {
       return `${key}Id`;
     }
-
+     
     return this._super(...arguments);
   },
 

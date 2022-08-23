@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'books',
     environment,
     rootURL: '/',
-    backendUrl: 'http://localhost:3000',
+    backendUrl: 'http://localhost:57398',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -24,7 +24,7 @@ module.exports = function (environment) {
       // when it is created
     },
     'ember-simple-auth-token': {
-      serverTokenEndpoint: 'http://localhost:3000/token',
+      serverTokenEndpoint: 'http://localhost:57398/api/users/token',
       refreshAccessTokens: false
     },
     'ember-cli-google': {
