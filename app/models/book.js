@@ -6,8 +6,8 @@ export default DS.Model.extend({
   sumPages: DS.attr("number"),
   tags: DS.attr(),
   averageRating: DS.attr("number"),
-  URLcover: DS.attr("string"),
-  URLDescription: DS.attr("string"),
+  urlCover: DS.attr("string"),
+  urlDescription: DS.attr("string"),
 
   report: DS.hasMany("report"),
   user: DS.belongsTo('user')

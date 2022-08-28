@@ -13,7 +13,7 @@ export default Controller.extend({
             const newMeeting = this.get('model.meeting');
             const date = this.get('moment').moment(newMeeting.dateMeeting, 'YYYY-MM-DD').toDate();
 
-            try {
+           // try {
                 const meeting = this.get("store").createRecord("meeting", {
                     dateMeeting: date,
                     reports: []
@@ -22,6 +22,7 @@ export default Controller.extend({
 
                 const reports = newMeeting.reports.map(r => {
                     return new Promise(async (resolve, reject) => {
+                        console.log(r);
                         const report = await this.get("store").createRecord("report", r);
                         await meeting.reports.pushObject(report);
                         await report.save();
@@ -33,11 +34,11 @@ export default Controller.extend({
                 await meeting.save();
                 await this.get('store').unloadAll();
 
-            } catch (error) {
-                applicationLogger.log(this.target.currentURL, error.message)
-            }
+            // } catch (error) {
+            //     applicationLogger.log(this.target.currentURL, error.message)
+            // }
 
-            this.transitionToRoute("meetings");
+           //this.transitionToRoute("meetings");
         },
         async saveReport(newReport) {
             const meeting = this.get('model.meeting');

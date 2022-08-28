@@ -5,7 +5,6 @@ export default DS.JSONSerializer.extend({
   primaryKey: '__PrimaryKey',
 
   extractId(modelClass, resourceHash) {
-    //debugger;
     const primaryKey = this.get('primaryKey');
     return resourceHash[primaryKey].guid;
   },

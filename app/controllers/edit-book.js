@@ -9,6 +9,20 @@ export default Controller.extend({
     this._super(...arguments);
   },
 
+  readFileAsync(file) {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
+
+      reader.onloadend = () => {
+        resolve(reader.result);
+      };
+
+      reader.onerror = reject;
+
+      reader.readAsDataURL(file);
+    })
+  },
+  
   actions: {
     async updateBook(book, uploadData) {
       const applicationLogger = get(this, 'applicationLogger');
@@ -20,16 +34,20 @@ export default Controller.extend({
         bookModel.set("sumPages", book.sumPages);
         bookModel.set("tags", book.tags);
         bookModel.set("average_rating", book.average_rating);
-        bookModel.set("URLcover", book.URLcover);
-        bookModel.set("URLDescription", book.URLDescription);
-        await bookModel.save();
+        bookModel.set("urlCover", book.urlCover);
+        bookModel.set("urlDescription", book.urlDescription);
 
         if (uploadData) {
-          uploadData.url = ENV.fileUploadURL;
-          let req = await uploadData.submit();
-          bookModel.set("URLcover", `/uploads/${req.filename}`);
-          await bookModel.save();
+          const base64text = await this.readFileAsync(uploadData.files[0]);
+          const mass = base64text.split(',');
+          const newImage = this.get("store").createRecord("image", {
+            type: mass[0],
+            img: mass[1],
+          });
+          await newImage.save();
+          bookModel.set("urlCover", `${ENV.backendUrl}/images/${newImage.id}`);
         }
+        await bookModel.save();
       } catch (error) {
         applicationLogger.log(this.target.currentURL, error.message)
       }

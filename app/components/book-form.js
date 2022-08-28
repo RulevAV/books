@@ -15,8 +15,8 @@ export default Component.extend({
         sumPages: this.get("sumPages"),
         tags: this.get("tags"),
         averageRating: this.get("averageRating"),
-        URLcover: this.get("URLcover"),
-        URLDescription: this.get("URLDescription"),
+        urlCover: this.get("urlCover"),
+        urlDescription: this.get("urlDescription"),
         user:this.get("currentUser.user")
       }, this.get("uploadData"))
     },
@@ -33,8 +33,8 @@ export default Component.extend({
       sumPages: this.get("book.sumPages"),
       tags: this.get("book.tags"),
       averageRating: this.get("book.averageRating"),
-      URLcover: this.get("book.URLcover"),
-      URLDescription: this.get("book.URLDescription"),
+      urlCover: this.get("book.urlCover"),
+      urlDescription: this.get("book.urlDescription"),
     });
   }
 });

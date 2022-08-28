@@ -10,8 +10,8 @@ export default Route.extend(AuthenticatedRouteMixin,{
       sumPages: 0,
       tags: [],
       averageRating: 0,
-      URLcover: "",
-      URLDescription: "",
+      urlCover: "",
+      urlDescription: "",
     })
   }
 });

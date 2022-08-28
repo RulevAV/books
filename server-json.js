@@ -119,7 +119,7 @@ server.post('/saveURL', function (req, res) {
   const db = router.db; //lowdb instance
   const book = db.getState().books.find(book => book.id === entityId);
 
-  book.URLcover = `${urlBase}${fileName}`;
+  book.urlCover = `${urlBase}${fileName}`;
   db.write();
   res.status(200).json(book);
 });
